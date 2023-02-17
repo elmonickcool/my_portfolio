@@ -1,9 +1,7 @@
-import { Box, Flex, Link, Button } from '@chakra-ui/react'
-import NextLink from 'next/link'
 
 const Navbar = () => {
   return (
-    <>This is Navbarar</>
+    <h1 className="text-3xl font-bold underline">This is Navbarar</h1>
   )
 }
 
