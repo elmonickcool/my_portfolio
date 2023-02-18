@@ -26,7 +26,7 @@ const Navbar = () => {
               </Link>
               <Link as={NextLink} href="/about" passHref={true} legacyBehavior={true}>
                 <a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                  About
+                  Projects
                 </a>
               </Link>
             </div>
