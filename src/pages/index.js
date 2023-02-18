@@ -1,9 +1,11 @@
+import Hero from "@/components/Hero"
+
 function HomePage() {
     return (
-    <div>
-        Welcome to Next.js!
+        <div>
+            <Hero/>
         </div>
-        )
-  }
-  
-  export default HomePage
+    )
+}
+
+export default HomePage
