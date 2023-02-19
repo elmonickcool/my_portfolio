@@ -11,7 +11,7 @@ const Hero = () => {
           Hello, I'm <span className="text-blue-900">Elmo Nickol</span>
         </h1>
         <h3 className="text-2xl">An Aspiring Full Stack Web Developer</h3>
-        <FontAwesomeIcon icon={faGithub} className="text-3xl text-black" />
+        <FontAwesomeIcon icon={faGithub} className="text-3xl text-black" /> &nbsp;
         <FontAwesomeIcon icon={faLinkedin} className="text-3xl text-black" />
       </div>
       <div className="flex justify-end flex-1">
