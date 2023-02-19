@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="h-screen flex items-center">
       <div className="ml-4">
         <h1 className="font-medium text-4xl">
-          Hello, I'm <span className="text-blue-900">Elmo Nickol</span>
+          Hello, I&apos;m <span className="text-blue-900">Elmo Nickol</span>
         </h1>
         <h3 className="text-2xl">An Aspiring Full Stack Web Developer</h3>
         <FontAwesomeIcon icon={faGithub} className="text-3xl text-black mx-2" />
