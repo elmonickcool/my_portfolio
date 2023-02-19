@@ -1,6 +1,6 @@
 
 const Hero = () => {
-    
+
   return (
     <div className="h-screen flex items-center">
       <div className="mr-8">
