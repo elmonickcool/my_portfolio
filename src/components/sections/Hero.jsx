@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 const Hero = () => {
 
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
         <h3 className="text-2xl">An Aspiring Full Stack Web Developer</h3>
       </div>
       <div className="flex justify-end flex-1">
-        <img src="hero.png" alt="your-image-alt-text" />
+        <Image src="/hero.png" width={500} height={500}  alt="your-image-alt-text" />
       </div>
     </div>
   );
