@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
+import DarkModeSwitch from "../ui/DarkModeSwitch";
 
 const Hero = () => {
   return (
@@ -11,7 +12,8 @@ const Hero = () => {
         </h1>
         <h3 className="text-2xl">An Aspiring Full Stack Web Developer</h3>
           <GithubIcon/>
-          <LinkedinIcon/>        
+          <LinkedinIcon/>
+          <DarkModeSwitch/>        
       </div>
       <div className="flex justify-end flex-1">
         <Image src="/hero.png" width={500} height={500} alt="your-image-alt-text" />
