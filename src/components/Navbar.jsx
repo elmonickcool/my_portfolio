@@ -20,7 +20,11 @@ const Navbar = () => {
     <div className="mb-7">
       <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <span className="font-semibold text-xl tracking-tight">MyApp</span>
+          <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
+            <a>
+              <span className="font-semibold text-xl tracking-tight">Elmo Nickol</span>
+            </a>
+          </Link>
         </div>
         <div className="block lg:hidden">
           <button
