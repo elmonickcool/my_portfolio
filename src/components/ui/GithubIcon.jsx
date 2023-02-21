@@ -1,14 +1,21 @@
 import NextLink from "next/link";
+import { useColorMode, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "@chakra-ui/react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const GithubIcon=()=>{
-    return(
-         <Link as={NextLink} href="https://github.com/elmonickcool">
-          <FontAwesomeIcon icon={faGithub} className="text-3xl text-black mx-2" />
-        </Link>
-    )
-}
+const GithubIcon = () => {
+  const { colorMode } = useColorMode();
 
-export default GithubIcon
+  return (
+    <Link as={NextLink} href="https://github.com/elmonickcool">
+      <FontAwesomeIcon
+        icon={faGithub}
+        className={`text-3xl mx-2 ${
+          colorMode === "light" ? "text-black" : "text-white"
+        }`}
+      />
+    </Link>
+  );
+};
+
+export default GithubIcon;
