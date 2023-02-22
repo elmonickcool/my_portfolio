@@ -5,8 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <div className="h-screen items-center flex  ">
-      <div className="ml-4">
+    <div className="h-screen items-center flex">
+      <div className="ml-6">
         <GithubIcon />
         <LinkedinIcon />
         <DarkModeSwitch />
