@@ -7,8 +7,6 @@ const DarkModeSwitch = () => {
 
   return (
     <IconButton
-      size="md"
-      fontSize="lg"
       aria-label={`Switch to ${
         colorMode === "light" ? "dark" : "light"
       } mode`}
@@ -16,7 +14,7 @@ const DarkModeSwitch = () => {
       color="current"
       onClick={toggleColorMode}
       icon={
-        <FontAwesomeIcon icon={colorMode === "light" ? faMoon : faSun} />
+        <FontAwesomeIcon icon={colorMode === "light" ? faMoon : faSun} className="text-3xl mx-2" />
       }
     />
   )
