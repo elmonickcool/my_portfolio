@@ -32,7 +32,7 @@ const Hero = () => {
         
       </div>
       <div className="flex flex-1 justify-end">
-        <img src="/hero.png" alt="landing image" />
+        <img src="/hero.png" width={500} height={500} alt="landing image" />
       </div>
     </div>
   );
