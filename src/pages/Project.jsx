@@ -4,7 +4,8 @@ import Showcase from '../asset/api/project.json'
 const Project = () => {
 
   return (
-    <div className='flex flex-row gap-4'>
+    <div class="container mx-auto px-4">
+      <div className='flex flex-row gap-4'>
       {Showcase.map(projectShowcase => {
         return (
           <div className='w-1/3'>
@@ -40,6 +41,7 @@ const Project = () => {
         )
       })}
 
+    </div>
     </div>
   )
 }
