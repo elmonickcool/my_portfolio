@@ -1,6 +1,7 @@
 import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
 import { TypeAnimation } from "react-type-animation";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -30,7 +31,7 @@ const Hero = () => {
         
       </div>
       <div className="flex flex-1 justify-end">
-        <img src="/hero.png" width={500} height={500} alt="landing image" />
+        <Image src="/hero.png" width={500} height={500} alt="landing image" />
       </div>
     </div>
   );
