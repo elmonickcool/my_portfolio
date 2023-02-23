@@ -11,7 +11,7 @@ const DarkModeSwitch = () => {
         colorMode === "light" ? "dark" : "light"
       } mode`}
       variant="ghost"
-      color="current"
+      color="yellow.500"
       onClick={toggleColorMode}
       icon={
         <FontAwesomeIcon icon={colorMode === "light" ? faMoon : faSun} className="text-3xl mx-2" />
