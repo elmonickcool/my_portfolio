@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "Asean Tours",
-    "description": "AseanTours appears to be a website that provides information and resources for travelers who are interested in exploring various countries and destinations throughout Southeast Asia. The site may include details on popular tourist attractions, local customs and culture, transportation options, accommodations, and more.",
+    "description": "AseanTours appears to be a website that provides information and resources for travelers who are interested in exploring various countries and destinations throughout Southeast Asia. ",
     "github": "https://github.com/elmonickcool/AseanTours",
     "live": "https://asean-tours.vercel.app/",
     "img":"pokedex_landing_page.png"
