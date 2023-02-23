@@ -4,20 +4,23 @@
     "title": "Pokedex",
     "description": "Lorem Ipsum dolor sit etcetera",
     "github": "https://github.com/januspaul/pokedex",
-    "live": "https://pokedex-januspaul.vercel.app"
+    "live": "https://pokedex-januspaul.vercel.app",
+    "img":"pokedex_landing_page.png"
   },
   {
     "id": 2,
-    "title": "Pokedex",
+    "title": "Sweldo App",
     "description": "Lorem Ipsum dolor sit etcetera",
     "github": "https://github.com/januspaul/pokedex",
-    "live": "https://pokedex-januspaul.vercel.app"
+    "live": "https://pokedex-januspaul.vercel.app",
+    "img":"sweldo_landing_page.png"
   },
   {
     "id": 3,
-    "title": "Pokedex",
+    "title": "Asean Tours",
     "description": "Lorem Ipsum dolor sit etcetera",
     "github": "https://github.com/januspaul/pokedex",
-    "live": "https://pokedex-januspaul.vercel.app"
+    "live": "https://pokedex-januspaul.vercel.app",
+    "img":"pokedex_landing_page.png"
   }
 ]
