@@ -1,47 +1,59 @@
-import { Card, Image, Heading, Text, Stack, Button, Divider, ButtonGroup, CardBody, CardFooter } from '@chakra-ui/react'
+import { Card, Image, Heading, Text, Stack, CardBody, CardFooter } from '@chakra-ui/react'
 import Showcase from '../asset/api/project.json'
+import NextLink from "next/link";
+import { useColorMode, Link } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {faGlobe} from "@fortawesome/free-regular-svg-icons";
+
+
 
 const Project = () => {
-
+  const { colorMode } = useColorMode();
   return (
     <div class="container mx-auto px-4">
       <div className='flex flex-row gap-4'>
-      {Showcase.map(projectShowcase => {
-        return (
-          <div className='w-1/3'>
-            <Card maxW='sm'>
-              <CardBody>
-                <Image
-                  src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-                  alt='Green double couch with wooden legs'
-                  borderRadius='lg'
-                />
-                <Stack mt='6' spacing='3'>
-                  <Heading size='md'>
-                    {projectShowcase.title}
-                  </Heading>
-                  <Text>
-                    {projectShowcase.description}
-                  </Text>
-                </Stack>
-              </CardBody>
-              <Divider />
-              <CardFooter>
-                <ButtonGroup spacing='2'>
-                  <Button variant='solid' colorScheme='blue'>
-                    Buy now
-                  </Button>
-                  <Button variant='ghost' colorScheme='blue'>
-                    Add to cart
-                  </Button>
-                </ButtonGroup>
-              </CardFooter>
-            </Card>
-          </div>
-        )
-      })}
+        {Showcase.map(projectShowcase => {
+          return (
+            <div className='w-1/3'>
+              <Card maxW='sm' bg="slate.400">
+                <CardBody>
+                  <Image
+                    src={projectShowcase.img}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>
+                      {projectShowcase.title}
+                    </Heading>
+                    <Text>
+                      {projectShowcase.description}
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <CardFooter>
+                  <Link as={NextLink} href="https://github.com/elmonickcool">
+                    <FontAwesomeIcon
+                      icon={faGlobe}
+                      className={`text-3xl mx-2 ${colorMode === "light" ? "text-black" : "text-white"
+                        }`}
+                    />
+                  </Link>
+                  <Link as={NextLink} href="https://github.com/elmonickcool">
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className={`text-3xl mx-2 ${colorMode === "light" ? "text-black" : "text-white"
+                        }`}
+                    />
+                  </Link>
+                </CardFooter>
+              </Card>
+            </div>
+          )
+        })}
 
-    </div>
+      </div>
     </div>
   )
 }
