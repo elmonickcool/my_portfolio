@@ -13,9 +13,9 @@ const Project = () => {
   return (
     <div class="container mx-auto px-4">
       <div className='flex flex-row gap-4'>
-        {Showcase.map(projectShowcase => {
+        {Showcase.map((projectShowcase,index) => {
           return (
-            <div className='w-1/3'>
+            <div className='w-1/3' key={index}>
               <Card maxW='sm' bg="slate.400">
                 <CardBody>
                   <Image
