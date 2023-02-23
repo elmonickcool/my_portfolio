@@ -51,6 +51,16 @@ const Navbar = () => {
                   Projects
                 </a>
               </Link>
+              <Link as={NextLink} href="/Project" passHref={true} legacyBehavior={true}>
+                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white text-xl font-semibold hover:text-white mr-4`}>
+                  About
+                </a>
+              </Link>
+              <Link as={NextLink} href="/Project" passHref={true} legacyBehavior={true}>
+                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white text-xl font-semibold hover:text-white mr-4`}>
+                  Contact
+                </a>
+              </Link>
               <DarkModeSwitch/>
             </div>
           </div>
