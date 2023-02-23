@@ -1,6 +1,5 @@
 import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
-import DarkModeSwitch from "../ui/DarkModeSwitch";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
@@ -8,8 +7,7 @@ const Hero = () => {
     <div className="h-screen items-center flex">
       <div className="ml-6">
         <GithubIcon />
-        <LinkedinIcon />
-        <DarkModeSwitch />
+        <LinkedinIcon />        
         <h1 className="font-medium text-4xl">
           Hello, I&apos;m <span className="font-bold">Elmo Nickol</span>
         </h1>

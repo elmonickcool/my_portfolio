@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import NextLink from 'next/link';
 import { Link, useDisclosure } from '@chakra-ui/react';
+import DarkModeSwitch from "../components/ui/DarkModeSwitch";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -41,15 +42,16 @@ const Navbar = () => {
           <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
             <div className={`${isMobile ? '' : 'flex justify-end'}`}>
               <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white hover:text-white mr-4`}>
+                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white text-xl font-semibold hover:text-white mr-4`}>
                   Home
                 </a>
               </Link>
               <Link as={NextLink} href="/Project" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white hover:text-white mr-4`}>
+                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-white text-xl font-semibold hover:text-white mr-4`}>
                   Projects
                 </a>
               </Link>
+              <DarkModeSwitch/>
             </div>
           </div>
         </div>
