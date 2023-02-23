@@ -1,10 +1,10 @@
-import { Card, Image, Heading, Text, Stack, CardBody, CardFooter } from '@chakra-ui/react'
-import Showcase from '../asset/api/project.json'
+import { Card, Image, Heading, Text, Stack, CardBody, CardFooter } from '@chakra-ui/react';
+import Showcase from '../asset/api/project.json';
 import NextLink from "next/link";
 import { useColorMode, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {faGlobe} from "@fortawesome/free-regular-svg-icons";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -33,14 +33,14 @@ const Project = () => {
                   </Stack>
                 </CardBody>
                 <CardFooter>
-                  <Link as={NextLink} href="https://github.com/elmonickcool">
+                  <Link as={NextLink} href={projectShowcase.live}>
                     <FontAwesomeIcon
                       icon={faGlobe}
                       className={`text-3xl mx-2 ${colorMode === "light" ? "text-black" : "text-white"
                         }`}
                     />
                   </Link>
-                  <Link as={NextLink} href="https://github.com/elmonickcool">
+                  <Link as={NextLink} href={projectShowcase.github}>
                     <FontAwesomeIcon
                       icon={faGithub}
                       className={`text-3xl mx-2 ${colorMode === "light" ? "text-black" : "text-white"
