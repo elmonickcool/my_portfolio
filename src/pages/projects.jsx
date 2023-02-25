@@ -27,6 +27,9 @@ const Project = () => {
                     <Heading size='md'>
                       {projectShowcase.title}
                     </Heading>
+                    <Text fontStyle='italic'>
+                      {projectShowcase.stack.join(', ')}
+                    </Text>
                     <Text>
                       {projectShowcase.description}
                     </Text>

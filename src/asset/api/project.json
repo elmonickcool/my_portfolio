@@ -5,7 +5,13 @@
     "description": "Pokedex is a website that serves as an electronic encyclopedia for the Pokemon franchise. It contains information on all the different types of Pokemon, including their physical characteristics, abilities, and statistics.",
     "github": "https://github.com/januspaul/pokedex",
     "live": "https://pokedex-januspaul.vercel.app",
-    "img":"pokedex_landing_page.png"
+    "img":"pokedex_landing_page.png",
+    "stack" :[
+      "React",
+      "Bootstrap",
+      "Axios",
+      "Firebase"  
+    ]
   },
   {
     "id": 2,
@@ -13,7 +19,13 @@
     "description": "Employees are able to access and track the number of hours they have spent working, view their pay stubs and salary history, request time off, and manage their personal information all through a user-friendly online portal.",
     "github": "https://github.com/januspaul/pokedex",
     "live": "https://pokedex-januspaul.vercel.app",
-    "img":"sweldo_landing_page.png"
+    "img":"sweldo_landing_page.png",
+    "stack":[
+      "React",
+      "MySQL",
+      "Laravel",
+      "TailwindCSS"
+    ]
   },
   {
     "id": 3,
@@ -21,6 +33,11 @@
     "description": "AseanTours appears to be a website that provides information and resources for travelers who are interested in exploring various countries and destinations throughout Southeast Asia. ",
     "github": "https://github.com/elmonickcool/AseanTours",
     "live": "https://asean-tours.vercel.app/",
-    "img":"pokedex_landing_page.png"
+    "img":"asean_tours_page.png",
+    "stack":[
+      "HTML",
+      "CSS",
+      "Bootstrap"
+    ]
   }
 ]
