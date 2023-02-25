@@ -17,8 +17,8 @@
     "id": 2,
     "title": "Sweldo App",
     "description": "Employees are able to access and track the number of hours they have spent working, view their pay stubs and salary history, request time off, and manage their personal information all through a user-friendly online portal.",
-    "github": "https://github.com/januspaul/pokedex",
-    "live": "https://pokedex-januspaul.vercel.app",
+    "github": "https://github.com/jasonlerit/capstone-sweldo-app",
+    "live": "https://sweldo-app.vercel.app/",
     "img":"sweldo_landing_page.png",
     "stack":[
       "React",
