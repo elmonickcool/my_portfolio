@@ -7,7 +7,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 
 
-
 const Project = () => {
   const { colorMode } = useColorMode();
   return (
@@ -16,11 +15,11 @@ const Project = () => {
         {Showcase.map((projectShowcase,index) => {
           return (
             <div className='w-1/3' key={index}>
-              <Card maxW='sm' bg="slate.400">
+              <Card maxW='sm' bg="slate.400" boxShadow="md">
                 <CardBody>
                   <Image
                     src={projectShowcase.img}
-                    alt='Green double couch with wooden legs'
+                    alt='landing page'
                     borderRadius='lg'
                   />
                   <Stack mt='6' spacing='3'>
