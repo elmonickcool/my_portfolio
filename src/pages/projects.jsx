@@ -9,13 +9,14 @@ import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 
 const Project = () => {
   const { colorMode } = useColorMode();
+  const bgColor = { light: 'gray.100', dark: 'gray.700' };
   return (
     <div class="container mx-auto px-4">
       <div className='flex flex-row gap-4'>
         {Showcase.map((projectShowcase,index) => {
           return (
             <div className='w-1/3' key={index}>
-              <Card maxW='sm' bg="slate.400" boxShadow="md">
+              <Card maxW='sm' bg={bgColor[colorMode]} boxShadow="md">
                 <CardBody>
                   <Image
                     src={projectShowcase.img}
