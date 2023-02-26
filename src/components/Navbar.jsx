@@ -47,22 +47,22 @@ const Navbar = () => {
           <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
             <div className={`${isMobile ? '' : 'flex justify-end'}`}>
               <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'}  text-xl font-semibold mr-4`}>
+                <a className={`block text-xl mr-4 ${currentRoute === '/' ? 'font-bold' : 'font-medium'}`}>
                   Home
                 </a>
               </Link>
               <Link as={NextLink} href="/projects" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-xl font-semibold mr-4`}>
+                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/projects' ? 'font-bold' : ''}`}>
                   Projects
                 </a>
               </Link>
               <Link as={NextLink} href="/about" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-xl font-semibold mr-4`}>
+                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/about' ? 'font-bold' : ''}`}>
                   About
                 </a>
               </Link>
               <Link as={NextLink} href="/chat" passHref={true} legacyBehavior={true}>
-                <a className={`block ${isMobile ? 'my-2' : 'mt-4 lg:inline-block lg:mt-0'} text-xl font-semibold mr-4`}>
+                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/chat' ? 'font-bold' : ''}`}>
                   Contact
                 </a>
               </Link>
