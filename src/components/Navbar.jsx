@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
             <div className={`${isMobile ? '' : 'flex justify-end'}`}>
               <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl mr-4 ${currentRoute === '/' ? 'font-bold' : 'font-medium'}`}>
+                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/' ? 'font-bold' : 'font-medium'}`}>
                   Home
                 </a>
               </Link>
