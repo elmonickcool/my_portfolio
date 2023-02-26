@@ -16,7 +16,7 @@ const Project = () => {
         {Showcase.map((projectShowcase,index) => {
           return (
             <div className='w-1/3' key={index}>
-              <Card maxW='sm' bg={bgColor[colorMode]} boxShadow="md">
+              <Card maxW='sm' bg={bgColor[colorMode]} boxShadow="md" transition="transform 0.2s" _hover= {{transform:"scale(1.05)"}}>
                 <CardBody>
                   <Image
                     src={projectShowcase.img}
