@@ -1,6 +1,8 @@
 import FacebookIcon from "./ui/FacebookIcon"
 import InstagramIcon from "./ui/InstagramIcon"
 import TwitterIcon from "./ui/TwitterIcon"
+import GithubIcon from "./ui/GithubIcon"
+import LinkedinIcon from "./ui/LinkedinIcon"
 import { Box, Flex, Spacer, useBreakpointValue } from "@chakra-ui/react"
 
 const Footer = () => {
@@ -16,6 +18,8 @@ const Footer = () => {
         </Box>
         <Spacer />
         <Box display={display} justifyContent="center" spacex={5}>
+          <GithubIcon/>
+          <LinkedinIcon/>
           <FacebookIcon />
           <InstagramIcon />
           <TwitterIcon />
