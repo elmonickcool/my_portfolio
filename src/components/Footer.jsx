@@ -1,24 +1,30 @@
 import FacebookIcon from "./ui/FacebookIcon"
 import InstagramIcon from "./ui/InstagramIcon"
 import TwitterIcon from "./ui/TwitterIcon"
+import { Box, Flex, Spacer, useBreakpointValue } from "@chakra-ui/react"
 
 const Footer = () => {
+  const display = useBreakpointValue({ base: "block", md: "flex" })
+  const justify = useBreakpointValue({ base: "center", md: "space-between" })
+  const flexDirection = useBreakpointValue({ base: "column", md: "row" })
+
   return (
-    <div className="container mx-auto my-auto">
-      <div>
-        <hr className="mt-5 mb-5 border-b-2 " />
-      </div>
-      <div className="flex flex-col md:flex-row justify-between items-center ms-3">
-        <span className="font-semibold text-xl tracking-tight my-5 mb-5 md:my-0">Elmo Nickol</span>
-        <div className="flex justify-center md:justify-end space-x-5">
+    <Box mt={10} borderTopWidth="1px" borderTopColor="gray.300">
+      <Flex flexDirection={flexDirection} alignItems="center" justifyContent={justify} p={5}>
+        <Box as="span" fontWeight="semibold" fontSize="xl" mb={{ base: 5, md: 0 }}>
+          Elmo Nickol
+        </Box>
+        <Spacer />
+        <Box display={display} justifyContent="center" spacex={5}>
           <FacebookIcon />
           <InstagramIcon />
           <TwitterIcon />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 
 export default Footer
+
 

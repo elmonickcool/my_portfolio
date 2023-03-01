@@ -2,7 +2,7 @@ import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
-import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text } from "@chakra-ui/react";
+import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text,Container } from "@chakra-ui/react";
 
 const Hero = () => {
   const { colorMode } = useColorMode();
