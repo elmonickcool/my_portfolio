@@ -8,9 +8,8 @@ const Footer = () => {
       <div>
         <hr className="mt-5 mb-5 border-b-2 " />
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center ms-3">
         <span className="font-semibold text-xl tracking-tight my-5 mb-5 md:my-0">Elmo Nickol</span>
-        {/* FB, IG, TWITTER, EMAIL to the right */}
         <div className="flex justify-center md:justify-end space-x-5">
           <FacebookIcon />
           <InstagramIcon />
