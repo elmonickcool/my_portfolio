@@ -38,9 +38,7 @@ const Hero = () => {
                 wrapper="span"
                 repeat={Infinity}
               />
-           
                 </Text>
-                  
               </Box>
            </VStack>   
 
