@@ -25,29 +25,39 @@ const Stacks = () => {
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Front End</Text>
           <Flex justifyContent="center">
-            <Image src="/html5.svg" boxSize={100} mx={2} transform={hovered === "html" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("html")} onMouseLeave={handleLeave} />
-            <Image src="/css3.svg" boxSize={100} mx={2} transform={hovered === "css" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("css")} onMouseLeave={handleLeave} />
-            <Image src="/javascript.svg" boxSize={100} mx={2} transform={hovered === "javascript" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("javascript")} onMouseLeave={handleLeave} />
-            <Image src="/bootstrap.svg" boxSize={100} mx={2} transform={hovered === "bootstrap" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("bootstrap")} onMouseLeave={handleLeave}/>
-            <Image src="/react.svg" boxSize={100} mx={2} transform={hovered === "react" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("react")} onMouseLeave={handleLeave} />
-            <Image src="/tailwind.svg" boxSize={100} mx={2} transform={hovered === "tailwind" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("tailwind")} onMouseLeave={handleLeave} />
+            <Image src="/html5.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "html" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("html")} onMouseLeave={handleLeave} />
+            <Image src="/css3.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "css" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("css")} onMouseLeave={handleLeave} />
+            <Image src="/javascript.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "javascript" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("javascript")} onMouseLeave={handleLeave} />
+            <Image src="/react.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "react" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("react")} onMouseLeave={handleLeave} />
+            <Image src="/bootstrap.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "bootstrap" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("bootstrap")} onMouseLeave={handleLeave}/>
+            <Image src="/tailwind.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "tailwind" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("tailwind")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Back End</Text>
           <Flex justifyContent="center">
-            <Image src="/php.svg" boxSize={100} mx={2} transform={hovered === "php" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("php")} onMouseLeave={handleLeave} />
-            <Image src="/laravel.svg" boxSize={100} mx={2} transform={hovered === "laravel" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("laravel")} onMouseLeave={handleLeave} />
-            <Image src="/nodejs.svg" boxSize={100} mx={2} transform={hovered === "nodejs" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("nodejs")} onMouseLeave={handleLeave} />
-            <Image src="/python.svg" boxSize={100} mx={2} transform={hovered === "python" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("python")} onMouseLeave={handleLeave} />
-            <Image src="/java.svg" boxSize={100} mx={2} transform={hovered === "java" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("java")} onMouseLeave={handleLeave} />
+            <Image src="/php.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "php" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("php")} onMouseLeave={handleLeave} />
+            <Image src="/laravel.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "laravel" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("laravel")} onMouseLeave={handleLeave} />
+            <Image src="/nodejs.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "nodejs" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("nodejs")} onMouseLeave={handleLeave} />
+            <Image src="/python.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "python" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("python")} onMouseLeave={handleLeave} />
+            <Image src="/java.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "java" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("java")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Database</Text>
           <Flex justifyContent="center">
-            <Image src="/mysql.svg" boxSize={100} mx={2} transform={hovered === "mysql" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mysql")} onMouseLeave={handleLeave} />
-            <Image src="/firebase.svg" boxSize={100} mx={2} transform={hovered === "firebase" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("firebase")} onMouseLeave={handleLeave} />
+            <Image src="/mysql.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "mysql" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mysql")} onMouseLeave={handleLeave} />
+            <Image src="/firebase.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "firebase" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("firebase")} onMouseLeave={handleLeave} />
+          </Flex>
+        </Box>
+        <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
+          <Text fontSize="2xl" p={5} mb={3}>Other Tools</Text>
+          <Flex justifyContent="center">
+            <Image src="/figma.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "figma" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("figma")} onMouseLeave={handleLeave} />
+            <Image src="/git.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "git" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("git")} onMouseLeave={handleLeave} />
+            <Image src="/photoshop.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "photoshop" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("photoshop")} onMouseLeave={handleLeave} />
+            <Image src="/adobexd.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "adobexd" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("adobexd")} onMouseLeave={handleLeave} />
+            <Image src="/postman.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "postman" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("postman")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
       </Flex>
