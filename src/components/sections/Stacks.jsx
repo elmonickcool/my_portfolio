@@ -22,8 +22,8 @@ const Stacks = () => {
         alignItems="center" 
         flexWrap="wrap"
       >
-        <Box textAlign="center" my={4}>
-          <Text fontSize="2xl">Front End</Text>
+        <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
+          <Text fontSize="2xl" p={5} mb={3}>Front End</Text>
           <Flex justifyContent="center">
             <Image src="/html5.svg" boxSize={100} mx={2} transform={hovered === "html" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("html")} onMouseLeave={handleLeave} />
             <Image src="/css3.svg" boxSize={100} mx={2} transform={hovered === "css" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("css")} onMouseLeave={handleLeave} />
@@ -33,8 +33,8 @@ const Stacks = () => {
             <Image src="/tailwind.svg" boxSize={100} mx={2} transform={hovered === "tailwind" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("tailwind")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
-        <Box textAlign="center" my={4}>
-          <Text fontSize="2xl">Back End</Text>
+        <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
+          <Text fontSize="2xl" p={5} mb={3}>Back End</Text>
           <Flex justifyContent="center">
             <Image src="/php.svg" boxSize={100} mx={2} transform={hovered === "php" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("php")} onMouseLeave={handleLeave} />
             <Image src="/laravel.svg" boxSize={100} mx={2} transform={hovered === "laravel" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("laravel")} onMouseLeave={handleLeave} />
@@ -43,8 +43,8 @@ const Stacks = () => {
             <Image src="/java.svg" boxSize={100} mx={2} transform={hovered === "java" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("java")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
-        <Box textAlign="center" my={4}>
-          <Text fontSize="2xl">Database</Text>
+        <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
+          <Text fontSize="2xl" p={5} mb={3}>Database</Text>
           <Flex justifyContent="center">
             <Image src="/mysql.svg" boxSize={100} mx={2} transform={hovered === "mysql" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mysql")} onMouseLeave={handleLeave} />
             <Image src="/firebase.svg" boxSize={100} mx={2} transform={hovered === "firebase" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("firebase")} onMouseLeave={handleLeave} />
