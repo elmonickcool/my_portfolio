@@ -1,8 +1,7 @@
 import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
 import { TypeAnimation } from "react-type-animation";
-import Image from "next/image";
-import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text } from "@chakra-ui/react";
+import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text, Image } from "@chakra-ui/react";
 
 const Hero = () => {
   const { colorMode } = useColorMode();
@@ -44,7 +43,7 @@ const Hero = () => {
         <Spacer />
         <Stack direction={['column', 'column', 'row']} spacing={8} align={['center', 'center', 'flex-start']} mt={[8, 8, 0]}>
           <Box>
-            <Image src="/hero.png" width={500} height={500} alt="landing image" priority/>
+            <Image src="/hero.png" width={600} height={600} alt="landing image"/>
           </Box>
         </Stack>
       </Flex>
