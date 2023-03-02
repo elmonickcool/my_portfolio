@@ -32,7 +32,7 @@ const Hero = () => {
                       'Back-end Developer',
                       1000,
                     ]}
-                    speed={50}
+                    speed={20}
                     wrapper="span"
                     repeat={Infinity}
                   />
