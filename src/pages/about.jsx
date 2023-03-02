@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Stack, Heading, Text, Image } from "@chakra-ui/react";
 
 const About = () => {
   return (
-    <Flex alignItems="center">
-      <Image src="/elmonickol.jpg" width={500} height={600} alt="about image" mr="8" borderRadius="lg" boxShadow="lg" />
-      <Box>
+    <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }}>
+      <Image src="/elmonickol.jpg" width={500} height={600} alt="about image" borderRadius="lg" boxShadow="lg" />
+      <Stack>
         <Heading>About me</Heading>
         <Text fontSize="lg" mt="4">
           Hello and welcome to my portfolio website! My name is Elmo Nickol Laplap, a 26-year-old Full Stack Web Developer from Quezon, Bukidnon. I graduated from Xavier University - Ateneo de Cagayan with a BS in Information System in 2019, and since then, I have pursued my passion for web developing.
@@ -15,8 +15,8 @@ const About = () => {
         <Text fontSize="lg" mt="4">
           In pursuit of my dream job as a Full Stack Web Developer, I attended the Kodego bootcamp to expand my skill set and knowledge. The bootcamp was a valuable learning experience that helped me sharpen my coding abilities and gain practical experience working on real-world projects.
         </Text>
-      </Box>
-    </Flex>
+      </Stack>
+    </Stack>
   );
 };
 
