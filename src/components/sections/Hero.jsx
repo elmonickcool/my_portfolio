@@ -43,7 +43,7 @@ const Hero = () => {
         <Spacer />
         <Stack direction={['column', 'column', 'row']} spacing={8} align={['center', 'center', 'flex-start']} mt={[8, 8, 0]}>
           <Box>
-            <Image src="/hero.png" width={600} height={600} alt="landing image"/>
+            <Image src="/hero.png" width={500} height={600} alt="landing image"/>
           </Box>
         </Stack>
       </Flex>
