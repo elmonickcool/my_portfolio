@@ -1,4 +1,4 @@
-import { Card, Image, Heading, Text, Stack, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, Image, Heading, Text, Stack, CardBody, CardFooter,SimpleGrid } from '@chakra-ui/react';
 import Showcase from '../asset/api/project.json';
 import NextLink from "next/link";
 import { useColorMode, Link, Badge } from "@chakra-ui/react";
@@ -11,11 +11,12 @@ const Project = () => {
   const { colorMode } = useColorMode();
   const bgColor = { light: 'gray.100', dark: 'gray.700' };
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 flex justify-content-center align-items-center">
       <div className='flex flex-row gap-4'>
+        <SimpleGrid columns={{sm:1,md:3}} spacing={5}>
         {Showcase.map((projectShowcase, index) => {
           return (
-            <div className='w-1/3' key={index}>
+            <div key={index}>
               <Card maxW='sm' bg={bgColor[colorMode]} boxShadow="md" transition="transform 0.2s" _hover={{ transform: "scale(1.05)" }}>
                 <CardBody>
                   <Image
@@ -41,8 +42,6 @@ const Project = () => {
                       }
                     </Text>
                   </Stack>
-                  
-
                 </CardBody>
                 <CardFooter>
                   <Link as={NextLink} href={projectShowcase.live}>
@@ -64,7 +63,7 @@ const Project = () => {
             </div>
           )
         })}
-
+        </SimpleGrid>
       </div>
     </div>
   )
