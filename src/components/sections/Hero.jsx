@@ -22,7 +22,7 @@ const Hero = () => {
                   Hello, I&apos;m <span className="font-bold">Elmo Nickol</span><br />
                   <TypeAnimation
                     sequence={[
-                      'Full-Stack Web Developer',
+                      'Full Stack Web Developer',
                       1000,
                       'Software Engineer',
                       1000,
