@@ -1,13 +1,24 @@
-const About = () =>{
-    return(
-        <div>
-            <p>
-            Highly motivated software engineer with a passion for creating innovative software solutions. 
-            Proficient in PHP, Javascript and MySQL with experience developing web applications, APIs, and database- driven software. 
-            Skilled in working collaboratively in a team environment, utilizing critical thinking to problem-solve and implement effective solutions.
-            </p>
-        </div>
-    )
-}
+import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 
-export default About
+const About = () => {
+  return (
+    <Flex alignItems="center">
+      <Image src="/elmonickol.jpg" width={500} height={600} alt="about image" mr="8" />
+      <Box>
+        <Heading>About me</Heading>
+        <Text fontSize="lg" mt="4">
+          Hello and welcome to my portfolio website! My name is Elmo Nickol Laplap, a 26-year-old Full Stack Web Developer from Quezon, Bukidnon. I graduated from Xavier University - Ateneo de Cagayan with a BS in Information System in 2019, and since then, I have pursued my passion for coding, gaming, and watching movies.
+        </Text>
+        <Text fontSize="lg" mt="4">
+          I have extensive experience in programming languages such as PHP, JavaScript, Python, and Java, and I'm always striving to learn more and stay up-to-date with the latest developments in the field. I'm committed to developing innovative and high-quality web applications that provide an optimal user experience.
+        </Text>
+        <Text fontSize="lg" mt="4">
+          In pursuit of my dream job as a Full Stack Web Developer, I attended the Kodego bootcamp to expand my skill set and knowledge. The bootcamp was a valuable learning experience that helped me sharpen my coding abilities and gain practical experience working on real-world projects.
+        </Text>
+      </Box>
+    </Flex>
+  );
+};
+
+export default About;
+
