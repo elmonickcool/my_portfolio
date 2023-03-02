@@ -1,7 +1,9 @@
 const Featured = () =>{
     return(
         <div>
-        My Projects
+        My Latest Project
         </div>
     )
 }
+
+export default Featured
