@@ -17,14 +17,10 @@ const Stacks = () => {
         Tech Stack
       </Text>
       <Flex
-        flexDirection={["column", "column", "row"]} 
-        justifyContent="space-evenly" 
-        alignItems="center" 
-        flexWrap="wrap"
-      >
+        flexDirection={["column", "column", "row"]} justifyContent="space-evenly" alignItems="center" flexWrap="wrap">
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Front End</Text>
-          <Flex justifyContent="center">
+          <Flex flexDirection={["row", "row", "row"]} flexWrap="wrap" justifyContent="center">
             <Image src="/html5.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "html" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("html")} onMouseLeave={handleLeave} />
             <Image src="/css3.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "css" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("css")} onMouseLeave={handleLeave} />
             <Image src="/javascript.svg" boxSize={["50px", "70px", "100px"]} m={3} transform={hovered === "javascript" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("javascript")} onMouseLeave={handleLeave} />
@@ -35,7 +31,7 @@ const Stacks = () => {
         </Box>
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Back End</Text>
-          <Flex justifyContent="center">
+          <Flex flexDirection={["row", "row", "row"]} flexWrap="wrap" justifyContent="center">
             <Image src="/php.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "php" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("php")} onMouseLeave={handleLeave} />
             <Image src="/laravel.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "laravel" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("laravel")} onMouseLeave={handleLeave} />
             <Image src="/nodejs.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "nodejs" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("nodejs")} onMouseLeave={handleLeave} />
@@ -45,7 +41,7 @@ const Stacks = () => {
         </Box>
         <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
           <Text fontSize="2xl" p={5} mb={3}>Database</Text>
-          <Flex justifyContent="center">
+          <Flex flexDirection={["row", "row", "row"]} flexWrap="wrap" justifyContent="center">
             <Image src="/mysql.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "mysql" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mysql")} onMouseLeave={handleLeave} />
             <Image src="/firebase.svg" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "firebase" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("firebase")} onMouseLeave={handleLeave} />
           </Flex>
