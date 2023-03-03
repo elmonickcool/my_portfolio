@@ -1,4 +1,4 @@
-import { Text, Box, Image, Spacer, useBreakpointValue } from "@chakra-ui/react";
+import { Text, Box, Image, useBreakpointValue, Spacer } from "@chakra-ui/react";
 
 const Overview = () => {
   const showImage = useBreakpointValue({ base: false, md: true });
@@ -6,25 +6,23 @@ const Overview = () => {
   const align = useBreakpointValue({ base: "center", md: "stretch" });
 
   return (
-    <Box display="flex" flexDirection={flexDir} align={align} mt={8} ms={7}>
+    <Box display="flex" flexDirection={flexDir} align={align} mt={4} ms={7}>
       {showImage && (
-        <Box mt={[4, null, 0]} mr={[0, null, 5]}>
+        <Box mt={[4, null, 0]} ml={[0, null, 4]} mb={-4}>
           <Image
-            src="overview_elmo.jpg"
-            borderRadius={10}
-            width={475}
-            height={780}
+            src="/web_dev.svg"
+            boxSize='650px'
             alt="overview photos"
           />
         </Box>
       )}
-      <Spacer />
+      <Box as="span" w="20px"></Box>
       <Box
         display="flex"
         flexDirection="column"
         flex={1}
         justifyContent="center"
-        my={[3, null, 0]}
+        my={2}
       >
         <Text fontSize={["3xl", "4xl"]} fontWeight="bold" mb={4}>
           Who am I?
@@ -35,6 +33,7 @@ const Overview = () => {
           database-driven software using PHP, Javascript, and MySQL.
         </Text>
       </Box>
+      
     </Box>
   );
 };
