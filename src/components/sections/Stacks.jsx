@@ -43,6 +43,7 @@ const Stacks = () => {
           <Text fontSize="2xl" p={5} mb={3}>Database</Text>
           <Flex flexDirection={["row", "row", "row"]} flexWrap="wrap" justifyContent="center">
             <Image src="/mysql.svg" alt="MySQL logo" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "mysql" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mysql")} onMouseLeave={handleLeave} />
+            <Image src="/mongodb.svg" alt="mongodb logo" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "mongodb" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("mongodb")} onMouseLeave={handleLeave} />
             <Image src="/firebase.svg" alt="Firebase logo" boxSize={["50px", "70px", "100px"]} mx={2} transform={hovered === "firebase" ? "scale(1.5)" : "scale(1)"} onMouseOver={() => handleHover("firebase")} onMouseLeave={handleLeave} />
           </Flex>
         </Box>
