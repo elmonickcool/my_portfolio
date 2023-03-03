@@ -1,4 +1,4 @@
-import { Stack, Heading, Text, Image } from "@chakra-ui/react";
+import { Stack, Text, Image } from "@chakra-ui/react";
 
 const About = () => {
   return (

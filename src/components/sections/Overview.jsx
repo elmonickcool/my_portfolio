@@ -2,7 +2,7 @@ import { Text, Box } from "@chakra-ui/react";
 
 const Overview = () => {
     return (
-        <Box>
+        <Box my={3} textAlign="center">
             <Text fontSize='3xl'>Who am I?</Text>
             <Text fontSize='xl'>
                 I am a highly motivated software engineer with a passion for innovative
