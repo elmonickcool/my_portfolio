@@ -3,9 +3,9 @@ import { Stack, Heading, Text, Image } from "@chakra-ui/react";
 const About = () => {
   return (
     <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }}>
-      <Image src="/elmonickol.jpg" width={500} height={600} alt="about image" borderRadius="lg" boxShadow="lg" />
+      <Image src="/elmonickol.jpg" width={500} height={500} ms={4} alt="about image" borderRadius="lg" boxShadow="lg" />
       <Stack>
-        <Heading>About me</Heading>
+        <Text fontSize='3xl' fontWeight='bold' mb={5}>About me</Text>
         <Text fontSize="lg" mt="4">
           Hello and welcome to my portfolio website! My name is Elmo Nickol Laplap, a 26-year-old Full Stack Web Developer from Quezon, Bukidnon. I graduated from Xavier University - Ateneo de Cagayan with a BS in Information System in 2019, and since then, I have pursued my passion for web developing.
         </Text>
