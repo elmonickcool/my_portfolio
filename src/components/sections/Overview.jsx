@@ -24,7 +24,7 @@ const Overview = () => {
         justifyContent="center"
         my={2}
       >
-        <Text fontSize={["3xl", "4xl"]} fontWeight="bold" mb={4}>
+        <Text fontSize={["3xl", "4xl"]} fontWeight="bold" mb={4} textAlign="center">
           Who am I?
         </Text>
         <Text fontSize={["xl", "2xl"]} lineHeight="tall">
