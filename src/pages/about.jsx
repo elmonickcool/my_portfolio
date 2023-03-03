@@ -2,7 +2,7 @@ import { Stack, Heading, Text, Image } from "@chakra-ui/react";
 
 const About = () => {
   return (
-    <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }}>
+    <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }} me={3} >
       <Image src="/elmonickol.jpg" width={500} height={500} ms={4} alt="about image" borderRadius="lg" boxShadow="lg" />
       <Stack>
         <Text fontSize='3xl' fontWeight='bold' mb={5}>About me</Text>
