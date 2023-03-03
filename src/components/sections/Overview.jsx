@@ -10,7 +10,7 @@ const Overview = () => {
       {showImage && (
         <Box mt={[4, null, 0]} ml={[0, null, 4]} mb={-4}>
           <Image
-            src="/web_dev.svg"
+            src="webdev.svg"
             boxSize='650px'
             alt="overview photos"
           />
