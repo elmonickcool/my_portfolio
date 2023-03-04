@@ -18,14 +18,31 @@ const db = getFirestore(app);
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [contactnum, setContactNum] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        if (name === 'name') {
+            setName(value);
+        } else if (name === 'email') {
+            setEmail(value);
+        } else if (name === 'contactnum') {
+            setContactNum(value);
+        } else if (name === 'message') {
+            setMessage(value);
+        }
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const docRef = await addDoc(collection(db, "contacts"), { name, email });
+            const docRef = await addDoc(collection(db, "contact"), { name, email, contactnum, message });
             console.log("Document written with ID: ", docRef.id);
             setName('');
             setEmail('');
+            setContactNum('');
+            setMessage('');
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -35,17 +52,23 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
             <FormControl>
                 <FormLabel>Name</FormLabel>
-                <Input type='text' value={name} onChange={(e) => setName(e.target.value)} />
+                <Input type='text' name='name' value={name} onChange={handleChange} />
             </FormControl>
             <FormControl>
                 <FormLabel>Email</FormLabel>
-                <Input type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Input type='email' name='email' value={email} onChange={handleChange} />
+            </FormControl>
+            <FormControl>
+                <FormLabel>Contact</FormLabel>
+                <Input type='text' name='contactnum' value={contactnum} onChange={handleChange} />
+            </FormControl>
+            <FormControl>
+                <FormLabel>Message</FormLabel>
+                <Input type='textarea' name='message' value={message} onChange={handleChange} />
             </FormControl>
             <Button type='submit'>Submit</Button>
         </form>
-
     );
-
 }
 
-export default Contact
+export default Contact;
