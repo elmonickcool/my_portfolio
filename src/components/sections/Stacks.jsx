@@ -1,5 +1,5 @@
 import { Text, Box, Image, Flex } from "@chakra-ui/react";
-import { useState } from "react";
+
 
 const Stacks = () => {
   return (
@@ -27,21 +27,13 @@ const Stacks = () => {
             <Image src="/laravel.svg" alt="Laravel logo" boxSize={["50px", "70px", "100px"]} mx={2} />
             <Image src="/nodejs.svg" alt="Node.js logo" boxSize={["50px", "70px", "100px"]} mx={2} />
             <Image src="/python.svg" alt="Python logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-                    <Image src="/java.svg" alt="Java logo" boxSize={["50px", "70px", "100px"]} mx={2} />
+            <Image src="/firebase.svg" alt="Firebase logo" boxSize={["50px", "70px", "100px"]} mx={2} />
+            <Image src="/mysql.svg" alt="MySQL logo" boxSize={["50px", "70px", "100px"]} mx={2} />
+
+          </Flex>
+        </Box>
       </Flex>
-    </Box>
-    <Box textAlign="center" my={4} border="1px" p={6} borderRadius="md">
-      <Text fontSize="2xl" p={5} mb={3}>Database</Text>
-      <Flex flexDirection={["row", "row", "row"]} flexWrap="wrap" justifyContent="center">
-        <Image src="/mysql.svg" alt="MySQL logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-        <Image src="/postgresql.svg" alt="PostgreSQL logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-        <Image src="/mongodb.svg" alt="MongoDB logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-        <Image src="/firebase.svg" alt="Firebase logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-        <Image src="/sqlite.svg" alt="SQLite logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-      </Flex>
-    </Box>
-  </Flex>
-</div>
+    </div>
   );
 };
 
