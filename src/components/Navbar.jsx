@@ -61,7 +61,7 @@ const Navbar = () => {
                   About
                 </a>
               </Link>
-              <Link as={NextLink} href="/chat" passHref={true} legacyBehavior={true}>
+              <Link as={NextLink} href="/contact" passHref={true} legacyBehavior={true}>
                 <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/chat' ? 'font-bold' : ''}`}>
                   Contact
                 </a>
