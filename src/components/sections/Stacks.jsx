@@ -29,7 +29,6 @@ const Stacks = () => {
             <Image src="/python.svg" alt="Python logo" boxSize={["50px", "70px", "100px"]} mx={2} />
             <Image src="/firebase.svg" alt="Firebase logo" boxSize={["50px", "70px", "100px"]} mx={2} />
             <Image src="/mysql.svg" alt="MySQL logo" boxSize={["50px", "70px", "100px"]} mx={2} />
-
           </Flex>
         </Box>
       </Flex>
