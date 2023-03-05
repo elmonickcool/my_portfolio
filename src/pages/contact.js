@@ -1,10 +1,10 @@
 import { initializeApp } from "@firebase/app";
 import { addDoc, collection, getFirestore, serverTimestamp } from "@firebase/firestore";
-import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode, Textarea } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode, Textarea, Text, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCUcqxTcbOssPiKqg6Weg256KkUlT_0Vxg",
@@ -56,7 +56,7 @@ const Contact = () => {
         const id = uuidv4();
         event.preventDefault();
         try {
-            const docRef = await addDoc(collection(db, "contact"), { id,name, email, contactnum, message, timestamp:serverTimestamp() });
+            const docRef = await addDoc(collection(db, "contact"), { id, name, email, contactnum, message, timestamp: serverTimestamp() });
             console.log("Document written with ID: ", docRef.id);
             setName('');
             setEmail('');
@@ -70,55 +70,59 @@ const Contact = () => {
 
     return (
         <>
-            
-             {formSubmitted ? (
+
+            {formSubmitted ? (
                 <Box textAlign='center' mt={8}>
                     <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
                 </Box>
-            ) :(
+            ) : (
                 <Heading textAlign='center'>Contact Me!</Heading>
             )
-}           <Box display='flex' justifyContent='space-between' my={8}>
-                <Box mr={8} mb={4}>
-                    Contact Information
-                    <Box>
-                        <div>
+
+            }
+
+            <Flex flexWrap="wrap" justifyContent={["center", "space-between"]}>
+                <Box mr={[0, 8]} mb={4} flexBasis={["100%", "auto"]}>
+                    <Text mb={5} textAlign="center">Contact Information</Text>
+                    <Box me={5} textAlign={["center", "left"]}>
+                        <Box mt={5}>
                             {getFontAwesomeIcon(faPhone)} 09123456789
-                        </div>
-                        <div mt={2}>
+                        </Box>
+                        <Box mt={5}>
                             {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
-                        </div>
-                        <div mt={2}>
+                        </Box>
+                        <Box mt={5}>
                             {getFontAwesomeIcon(faLocationDot)} Philippines
-                        </div>
+                        </Box>
                     </Box>
                 </Box>
-                <Box flex={1}>
+                <Box flex={1} p={[4, 8]}>
                     <form onSubmit={handleSubmit}>
                         <Box mb={5}>
                             <FormControl>
-                            <FormLabel>Name</FormLabel>
-                            <Input type='text' name='name' value={name} onChange={handleChange} />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Email</FormLabel>
-                            <Input type='email' name='email' value={email} onChange={handleChange} />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Contact</FormLabel>
-                            <Input type='text' name='contactnum' value={contactnum} onChange={handleChange} />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Message</FormLabel>
-                            <Textarea name='message' value={message} onChange={handleChange} />
-                        </FormControl>
+                                <FormLabel>Name</FormLabel>
+                                <Input type='text' name='name' value={name} onChange={handleChange} />
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel>Email</FormLabel>
+                                <Input type='email' name='email' value={email} onChange={handleChange} />
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel>Contact</FormLabel>
+                                <Input type='text' name='contactnum' value={contactnum} onChange={handleChange} />
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel>Message</FormLabel>
+                                <Textarea name='message' value={message} onChange={handleChange} />
+                            </FormControl>
                         </Box>
                         <Button type='submit' onClick={handleSubmit}>
                             Submit
                         </Button>
                     </form>
                 </Box>
-            </Box>
+
+            </Flex>
         </>
     );
 }
