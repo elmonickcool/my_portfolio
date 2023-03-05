@@ -1,7 +1,9 @@
 import { initializeApp } from "@firebase/app";
 import { addDoc, collection, getFirestore } from "@firebase/firestore";
-import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCUcqxTcbOssPiKqg6Weg256KkUlT_0Vxg",
@@ -20,19 +22,33 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [contactnum, setContactNum] = useState('');
     const [message, setMessage] = useState('');
+    const { colorMode } = useColorMode();
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        if (name === 'name') {
-            setName(value);
-        } else if (name === 'email') {
-            setEmail(value);
-        } else if (name === 'contactnum') {
-            setContactNum(value);
-        } else if (name === 'message') {
-            setMessage(value);
+    const handleChange = ({ target: { name, value } }) => {
+        switch (name) {
+            case 'name':
+                setName(value);
+                break;
+            case 'email':
+                setEmail(value);
+                break;
+            case 'contactnum':
+                setContactNum(value);
+                break;
+            case 'message':
+                setMessage(value);
+                break;
+            default:
+                break;
         }
     };
+
+    const getFontAwesomeIcon = (icon) => (
+        <FontAwesomeIcon
+            icon={icon}
+            className={`text-xl mx-2 ${colorMode === "light" ? "text-black" : "text-white"}`}
+        />
+    );
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -43,31 +59,51 @@ const Contact = () => {
             setEmail('');
             setContactNum('');
             setMessage('');
-        } catch (e) {
-            console.error("Error adding document: ", e);
+        } catch (error) {
+            console.error("Error adding document: ", error);
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <FormControl>
-                <FormLabel>Name</FormLabel>
-                <Input type='text' name='name' value={name} onChange={handleChange} />
-            </FormControl>
-            <FormControl>
-                <FormLabel>Email</FormLabel>
-                <Input type='email' name='email' value={email} onChange={handleChange} />
-            </FormControl>
-            <FormControl>
-                <FormLabel>Contact</FormLabel>
-                <Input type='text' name='contactnum' value={contactnum} onChange={handleChange} />
-            </FormControl>
-            <FormControl>
-                <FormLabel>Message</FormLabel>
-                <Input type='textarea' name='message' value={message} onChange={handleChange} />
-            </FormControl>
-            <Button type='submit'>Submit</Button>
-        </form>
+        <>
+            <Heading textAlign='center'>Contact Me!</Heading>
+            <Box display='flex' justifyContent='space-between' my={8}>
+                <Box mr={8} mb={4}>
+                    Contact Information
+                    <Box>
+                        <div>
+                            {getFontAwesomeIcon(faPhone)} 09123456789
+                        </div>
+                        <div mt={2}>
+                            {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
+                        </div>
+                    </Box>
+                </Box>
+                <Box flex={1}>
+                    <form onSubmit={handleSubmit}>
+                        <FormControl>
+                            <FormLabel>Name</FormLabel>
+                            <Input type='text' name='name' value={name} onChange={handleChange} />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel>Email</FormLabel>
+                            <Input type='email' name='email' value={email} onChange={handleChange} />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel>Contact</FormLabel>
+                            <Input type='text' name='contactnum' value={contactnum} onChange={handleChange} />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel>Message</FormLabel>
+                            <Input type='textarea' name='message' value={message} onChange={handleChange} />
+                        </FormControl>
+                        <Button type='submit' onClick={handleSubmit}>
+                            Submit
+                        </Button>
+                    </form>
+                </Box>
+            </Box>
+        </>
     );
 }
 
