@@ -72,11 +72,11 @@ const Contact = () => {
         <>
            
             <Flex flexDirection={["column", "row"]} justifyContent="space-around" alignItems={["center", "flex-start"]}>
-                <Box border="2px" p={5}>
+                <Box border="1px" borderRadius={5} p={5}>
                     <Heading mb={5} >Contact Information</Heading>
                     <Box me={5} textAlign={["center", "left"]}>
                         <Text mt={5}>
-                            {getFontAwesomeIcon(faPhone)} 09123456789
+                            {getFontAwesomeIcon(faPhone)} +639164728907
                         </Text>
                         <Link href='mailto:elmonickol@gmail.com'>
                             <Text mt={5}>
@@ -94,7 +94,7 @@ const Contact = () => {
                  
                 <Box w='50%' textAlign={["center","left"]}>
                     {formSubmitted ? (
-                <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
+                <Heading size='lg' mb={8}>Thank you for filling out the form. I will reply to you via email.</Heading>
             ) : (
                 <Heading textAlign='center' mb={8}>Get in touch</Heading>
             )
