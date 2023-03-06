@@ -73,7 +73,7 @@ const Contact = () => {
             {formSubmitted ? (
                 <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
             ) : (
-                <Heading textAlign='center' mb={8}>Contact Me!</Heading>
+                <Heading textAlign='center' mb={8}>Get in touch</Heading>
             )
             }
             <Flex justifyContent="space-around" alignItems="center">
@@ -119,8 +119,8 @@ const Contact = () => {
                                 <Textarea name='message' value={message} onChange={handleChange} />
                             </FormControl>
                         </Box>
-                        <Button type='submit' onClick={handleSubmit}>
-                            Submit
+                        <Button type='submit' onClick={handleSubmit} mt={5}>
+                            Send Message
                         </Button>
                     </form>
                 </Box>

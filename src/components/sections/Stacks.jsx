@@ -1,11 +1,11 @@
-import { Text, Box, Image, Grid } from "@chakra-ui/react";
+import { Text, Box, Image, Grid, Heading } from "@chakra-ui/react";
 
 const Stacks = () => {
   return (
-    <div>
-      <Text fontSize="4xl" textAlign="center" mt={5}>
+    <Box mx={3}>
+      <Heading fontSize="4xl" textAlign="center" mt={5}>
         Tech Stack
-      </Text>
+      </Heading>
       <Grid
         templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
         gap={6}
@@ -115,7 +115,7 @@ const Stacks = () => {
           
         </Box>
       </Grid>
-    </div>
+    </Box>
   );
 };
 
