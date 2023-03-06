@@ -91,14 +91,14 @@ const Contact = () => {
                         
                     </Box>
                 </Box>
-                 {formSubmitted ? (
+                 
+                <Box w='50%' textAlign={["center","left"]}>
+                    {formSubmitted ? (
                 <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
             ) : (
                 <Heading textAlign='center' mb={8}>Get in touch</Heading>
             )
             }
-                <Box w='50%' textAlign={["center","left"]}>
-
                     <form onSubmit={handleSubmit}>
                         <Box>
                             <FormControl>
