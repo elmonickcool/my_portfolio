@@ -70,35 +70,36 @@ const Contact = () => {
 
     return (
         <>
+{formSubmitted ? (
+                    
+                        <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
+                    
+                ) : (
+                    <Heading textAlign='center'>Contact Me!</Heading>
+                )
 
-            {formSubmitted ? (
-                <Box textAlign='center' mt={8}>
-                    <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
-                </Box>
-            ) : (
-                <Heading textAlign='center'>Contact Me!</Heading>
-            )
-
-            }
-
-            <Flex flexWrap="wrap" justifyContent={["center", "space-between"]}>
-                <Box mr={[0, 8]} mb={4} flexBasis={["100%", "auto"]}>
-                    <Text mb={5} textAlign="center">Contact Information</Text>
+                }
+            <Flex justifyContent="space-around" alignItems="center">
+                
+                <Box>
+                    <Text mb={5} >Contact Information</Text>
                     <Box me={5} textAlign={["center", "left"]}>
-                        <Box mt={5}>
+                        <Text mt={5}>
                             {getFontAwesomeIcon(faPhone)} 09123456789
-                        </Box>
-                        <Box mt={5}>
+                        </Text>
+                        <Text mt={5}>
                             {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
-                        </Box>
-                        <Box mt={5}>
+                        </Text>
+                        <Text mt={5}>
                             {getFontAwesomeIcon(faLocationDot)} Philippines
-                        </Box>
+                        </Text>
                     </Box>
                 </Box>
-                <Box flex={1} p={[4, 8]}>
+               
+                <Box w='50%'>
+                     
                     <form onSubmit={handleSubmit}>
-                        <Box mb={5}>
+                        <Box>
                             <FormControl>
                                 <FormLabel>Name</FormLabel>
                                 <Input type='text' name='name' value={name} onChange={handleChange} />
@@ -121,8 +122,9 @@ const Contact = () => {
                         </Button>
                     </form>
                 </Box>
-
             </Flex>
+
+
         </>
     );
 }
