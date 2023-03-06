@@ -1,6 +1,6 @@
 import { initializeApp } from "@firebase/app";
 import { addDoc, collection, getFirestore, serverTimestamp } from "@firebase/firestore";
-import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode, Textarea, Text, Flex } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode, Textarea, Text, Flex, Link } from "@chakra-ui/react";
 import { useState } from "react";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -70,34 +70,36 @@ const Contact = () => {
 
     return (
         <>
-{formSubmitted ? (
-                    
-                        <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
-                    
-                ) : (
-                    <Heading textAlign='center'>Contact Me!</Heading>
-                )
-
-                }
+            {formSubmitted ? (
+                <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
+            ) : (
+                <Heading textAlign='center' mb={8}>Contact Me!</Heading>
+            )
+            }
             <Flex justifyContent="space-around" alignItems="center">
-                
-                <Box>
-                    <Text mb={5} >Contact Information</Text>
+
+                <Box border="2px" p={5}>
+                    <Heading mb={5} >Contact Information</Heading>
                     <Box me={5} textAlign={["center", "left"]}>
                         <Text mt={5}>
                             {getFontAwesomeIcon(faPhone)} 09123456789
                         </Text>
-                        <Text mt={5}>
+                        <Link href='mailto:elmonickol@gmail.com'>
+                            <Text mt={5}>
                             {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
                         </Text>
+                        </Link>
+                        <Link href="https://goo.gl/maps/XAoQcfPffVfVD83c8">
                         <Text mt={5}>
-                            {getFontAwesomeIcon(faLocationDot)} Philippines
+                            {getFontAwesomeIcon(faLocationDot)} Balangay 2, Poblacion, Quezon, Bukidnon
                         </Text>
+                        </Link>
+                        
                     </Box>
                 </Box>
-               
+
                 <Box w='50%'>
-                     
+
                     <form onSubmit={handleSubmit}>
                         <Box>
                             <FormControl>
