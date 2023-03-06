@@ -70,14 +70,8 @@ const Contact = () => {
 
     return (
         <>
-            {formSubmitted ? (
-                <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
-            ) : (
-                <Heading textAlign='center' mb={8}>Get in touch</Heading>
-            )
-            }
-            <Flex justifyContent="space-around" alignItems="center">
-
+           
+            <Flex flexDirection={["column", "row"]} justifyContent="space-around" alignItems={["center", "flex-start"]}>
                 <Box border="2px" p={5}>
                     <Heading mb={5} >Contact Information</Heading>
                     <Box me={5} textAlign={["center", "left"]}>
@@ -97,8 +91,13 @@ const Contact = () => {
                         
                     </Box>
                 </Box>
-
-                <Box w='50%'>
+                 {formSubmitted ? (
+                <Heading size='lg'>Thank you for filling out the form. I will reply to you via email.</Heading>
+            ) : (
+                <Heading textAlign='center' mb={8}>Get in touch</Heading>
+            )
+            }
+                <Box w='50%' textAlign={["center","left"]}>
 
                     <form onSubmit={handleSubmit}>
                         <Box>
