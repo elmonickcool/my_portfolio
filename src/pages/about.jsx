@@ -1,7 +1,9 @@
-import { Stack, Text, Image, Box,Button,useColorMode } from "@chakra-ui/react";
+import { Stack, Text, Image, Box, Button } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 const About = () => {
   const { colorMode } = useColorMode();
+
   return (
     <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }} me={3}>
       <Image src="/elmonickol.jpg" width={500} height={500} ms={4} alt="about image" borderRadius="lg" boxShadow="lg" />
