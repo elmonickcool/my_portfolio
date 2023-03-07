@@ -70,35 +70,14 @@ const Contact = () => {
 
     return (
         <>
-           
             <Flex flexDirection={["column", "row"]} justifyContent="space-around" alignItems={["center", "flex-start"]}>
-                <Box border="1px" borderRadius={5} p={5}>
-                    <Heading mb={5} >Contact Information</Heading>
-                    <Box me={5} textAlign={["center", "left"]}>
-                        <Text mt={5}>
-                            {getFontAwesomeIcon(faPhone)} +639164728907
-                        </Text>
-                        <Link href='mailto:elmonickol@gmail.com'>
-                            <Text mt={5}>
-                            {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
-                        </Text>
-                        </Link>
-                        <Link href="https://goo.gl/maps/XAoQcfPffVfVD83c8">
-                        <Text mt={5}>
-                            {getFontAwesomeIcon(faLocationDot)} Balangay 2, Poblacion, Quezon, Bukidnon
-                        </Text>
-                        </Link>
-                        
-                    </Box>
-                </Box>
-                 
-                <Box w='50%' textAlign={["center","left"]}>
+                <Box w='50%' textAlign={["center", "left"]}>
                     {formSubmitted ? (
-                <Heading size='lg' mb={8}>Thank you for filling out the form. I will reply to you via email.</Heading>
-            ) : (
-                <Heading textAlign='center' mb={8}>Get in touch</Heading>
-            )
-            }
+                        <Heading size='lg' mb={8}>Thank you for filling out the form. I will reply to you via email.</Heading>
+                    ) : (
+                        <Heading textAlign='center' mb={8}>Get in touch</Heading>
+                    )
+                    }
                     <form onSubmit={handleSubmit}>
                         <Box>
                             <FormControl>
@@ -123,9 +102,25 @@ const Contact = () => {
                         </Button>
                     </form>
                 </Box>
+                <Box border="1px" borderRadius={5} p={5}>
+                    <Heading mb={5} >Contact Information</Heading>
+                    <Box me={5} textAlign={["center", "left"]}>
+                        <Text mt={5}>
+                            {getFontAwesomeIcon(faPhone)} +639164728907
+                        </Text>
+                        <Link href='mailto:elmonickol@gmail.com'>
+                            <Text mt={5}>
+                                {getFontAwesomeIcon(faEnvelope)} elmonickol@gmail.com
+                            </Text>
+                        </Link>
+                        <Link href="https://goo.gl/maps/XAoQcfPffVfVD83c8">
+                            <Text mt={5}>
+                                {getFontAwesomeIcon(faLocationDot)} Balangay 2, Poblacion, Quezon, Bukidnon
+                            </Text>
+                        </Link>
+                    </Box>
+                </Box>
             </Flex>
-
-
         </>
     );
 }
