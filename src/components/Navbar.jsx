@@ -70,7 +70,6 @@ const Navbar = () => {
           </div>
           <DarkModeSwitch/>
         </div>
-        
       </nav>
     </div>
   );

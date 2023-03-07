@@ -1,4 +1,4 @@
-import { Card, Image, Heading, Text, Stack, CardBody, CardFooter,SimpleGrid, useBreakpointValue, Box } from '@chakra-ui/react';
+import { Card, Image, Heading, Text, Stack, CardBody, CardFooter, SimpleGrid, useBreakpointValue, Box } from '@chakra-ui/react';
 import Showcase from '../asset/api/project.json';
 import NextLink from "next/link";
 import { useColorMode, Link, Badge } from "@chakra-ui/react";
@@ -63,9 +63,9 @@ const Project = () => {
             </div>
           )
         })}
-        </SimpleGrid>
+      </SimpleGrid>
     </Box>
-        
+
   )
 }
 export default Project

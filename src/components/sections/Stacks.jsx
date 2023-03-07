@@ -112,7 +112,6 @@ const Stacks = () => {
               alt="Python logo"
             />
           </Box>
-          
         </Box>
       </Grid>
     </Box>

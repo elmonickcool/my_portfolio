@@ -2,7 +2,7 @@ import { Heading, Box } from "@chakra-ui/react"
 import Project from "@/pages/projects"
 
 const Featured = () =>{
-    
+
     return(
         <>
         <Box mt={5} mb={5}>
@@ -10,7 +10,7 @@ const Featured = () =>{
             My Latest Project
             </Heading>
         </Box>
-        <Project/>
+        <Project/> {/* still processing to make change*/}
         </>
         
     )

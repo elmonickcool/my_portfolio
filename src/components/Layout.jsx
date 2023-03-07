@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
       setLoading(false)
     }, 3000)
   }, [])
+  
   return (
     <>
       <Navbar />
