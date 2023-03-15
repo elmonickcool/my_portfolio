@@ -10,10 +10,14 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  const currentRoute = router.pathname;
+  
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
+  };
+
+  const isActive = (route) => {
+    return router.pathname === route;
   };
 
   useEffect(() => {
@@ -47,22 +51,22 @@ const Navbar = () => {
           <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
             <div className={`${isMobile ? '' : 'flex justify-end'}`}>
               <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/' ? 'font-bold' : 'font-medium'}`}>
+                <a className={`block text-xl font-semibold mr-4 ${isActive('/') ? 'font-bold underline ' : 'font-medium'}`}>
                   Home
                 </a>
               </Link>
               <Link as={NextLink} href="/projects" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/projects' ? 'font-bold' : ''}`}>
+                <a className={`block text-xl font-semibold mr-4 ${isActive('/projects') ? 'font-bold underline' : 'font-medium'}`}>
                   Projects
                 </a>
               </Link>
               <Link as={NextLink} href="/about" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/about' ? 'font-bold' : ''}`}>
+                <a className={`block text-xl font-semibold mr-4 ${isActive('/about') ? 'font-bold underline' : 'font-medium'}`}>
                   About
                 </a>
               </Link>
               <Link as={NextLink} href="/contact" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${currentRoute === '/chat' ? 'font-bold' : ''}`}>
+                <a className={`block text-xl font-semibold mr-4 ${isActive('/contact') ? 'font-bold underline' : 'font-medium'}`}>
                   Contact
                 </a>
               </Link>
