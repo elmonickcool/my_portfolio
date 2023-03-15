@@ -1,6 +1,7 @@
 import { initializeApp } from "@firebase/app";
 import { addDoc, collection, getFirestore, serverTimestamp } from "@firebase/firestore";
 import { FormControl, FormLabel, Input, Button, Box, Heading, useColorMode, Textarea, Text, Flex, Link } from "@chakra-ui/react";
+import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
 import { useState } from "react";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -120,6 +121,7 @@ const Contact = () => {
                         </Link>
                     </Box>
                 </Box>
+                <BuyMeACoffeeButton/>
             </Flex>
         </>
     );
