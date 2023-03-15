@@ -19,7 +19,7 @@ const Hero = () => {
               </Box>
               <Box>
                 <Text fontSize={textSize} textAlign={['center', 'center', 'left']}>
-                  Hello, I&apos;m <span className="font-bold">Elmo Nickol</span><br />
+                  Hello, I&apos;m <Text as="span" className="font-bold" color="teal.400">Elmo Nickol</Text><br />
                   <TypeAnimation
                     sequence={[
                       'Full Stack Web Developer',
