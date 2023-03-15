@@ -97,7 +97,7 @@ const Contact = () => {
                                 <Textarea name='message' value={message} onChange={handleChange} />
                             </FormControl>
                         </Box>
-                        <Button type='submit' onClick={handleSubmit} mt={5}>
+                        <Button type='submit' onClick={handleSubmit} mt={5} w='100%'>
                             Send Message
                         </Button>
                     </form>
