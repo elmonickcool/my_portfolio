@@ -1,7 +1,8 @@
 import LinkedinIcon from "../ui/LinkedinIcon";
 import GithubIcon from "../ui/GithubIcon";
 import { TypeAnimation } from "react-type-animation";
-import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Center, VStack, Spacer, Stack, Text, Image } from "@chakra-ui/react";
+
 
 const Hero = () => {
   const textSize = ['2xl', '2xl', '3xl'];
@@ -41,7 +42,7 @@ const Hero = () => {
         <Spacer />
         <Stack direction={['column', 'column', 'row']} spacing={8} align={['center', 'center', 'flex-start']} mt={[8, 8, 0]}>
           <Box>
-            <Image src="/hero.png" width={700} height={700} alt="landing image"/>
+            <Image src="/hero.png" width={700} height={700} alt="landing image" style={{position: 'relative', zIndex: 1}} />
           </Box>
         </Stack>
       </Flex>
