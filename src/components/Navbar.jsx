@@ -47,26 +47,21 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto`}>
-          <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
-            <div className={`${isMobile ? '' : 'flex justify-end'}`}>
-              <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${isActive('/') ? 'font-bold underline ' : 'font-medium'}`}>
-                  Home
-                </a>
-              </Link>
+        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} flex items-center w-auto`}>
+          <div className={`text-sm ${isMobile ? 'block' : ''} justify-center`}>
+            <div className={`${isMobile ? '' : 'flex justify-center'}`}>
               <Link as={NextLink} href="/projects" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${isActive('/projects') ? 'font-bold underline' : 'font-medium'}`}>
+                <a className={`block text-xl  mr-4 ${isActive('/projects') ? 'font-bold' : 'font-medium'}`}>
                   Projects
                 </a>
               </Link>
               <Link as={NextLink} href="/about" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${isActive('/about') ? 'font-bold underline' : 'font-medium'}`}>
+                <a className={`block text-xl  mr-4 ${isActive('/about') ? 'font-bold' : 'font-medium'}`}>
                   About
                 </a>
               </Link>
               <Link as={NextLink} href="/contact" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl font-semibold mr-4 ${isActive('/contact') ? 'font-bold underline' : 'font-medium'}`}>
+                <a className={`block text-xl mr-4 ${isActive('/contact') ? 'font-bold' : 'font-medium'}`}>
                   Contact
                 </a>
               </Link>
