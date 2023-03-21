@@ -8,7 +8,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  
+
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
@@ -25,8 +25,8 @@ const Navbar = () => {
 
   return (
     <div className="mb-7">
-      <div className="flex items-center justify-between flex-row p-6">
-        <div className="flex items-center flex-shrink-0 mr-6 flex-grow">
+      <nav className="flex items-center justify-between flex-wrap p-6 ">
+        <div className="flex items-center flex-shrink-0 mr-6">
           <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
             <a>
               <span className="font-semibold text-xl tracking-tight">Elmo Nickol</span>
@@ -44,16 +44,16 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} flex items-center w-auto flex-grow`}>
-          <div className={`text-sm ${isMobile ? 'block' : 'flex'} justify-center`}>
-            <div className="flex justify-center">
+        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} flex items-center w-auto`}>
+          <div className={`text-sm ${isMobile ? 'block' : ''} justify-center`}>
+            <div className={`${isMobile ? '' : 'flex justify-center'}`}>
               <Link as={NextLink} href="/projects" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl mr-4 ${isActive('/projects') ? 'font-bold' : 'font-medium'}`}>
+                <a className={`block text-xl  mr-4 ${isActive('/projects') ? 'font-bold' : 'font-medium'}`}>
                   Projects
                 </a>
               </Link>
               <Link as={NextLink} href="/about" passHref={true} legacyBehavior={true}>
-                <a className={`block text-xl mr-4 ${isActive('/about') ? 'font-bold' : 'font-medium'}`}>
+                <a className={`block text-xl  mr-4 ${isActive('/about') ? 'font-bold' : 'font-medium'}`}>
                   About
                 </a>
               </Link>
@@ -64,9 +64,9 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+          <DarkModeSwitch/>
         </div>
-        <DarkModeSwitch className="flex-grow"/>
-      </div>
+      </nav>
     </div>
   );
 };
