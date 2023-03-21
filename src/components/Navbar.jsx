@@ -47,8 +47,8 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto`}>
-          <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
+        <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} flex items-center w-auto`}>
+          <div className={`text-sm ${isMobile ? 'block' : 'flex'} flex-grow`}>
             <div className={`${isMobile ? '' : 'flex justify-center'}`}>
               <Link as={NextLink} href="/projects" passHref={true} legacyBehavior={true}>
                 <a className={`block text-xl  mr-4 ${isActive('/projects') ? 'font-bold' : 'font-medium'}`}>
