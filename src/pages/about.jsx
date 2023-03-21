@@ -1,5 +1,6 @@
-import { Stack, Text, Image, Box, Button } from "@chakra-ui/react";
+import { Stack, Text, Image, Box, Button,HStack } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
+import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -20,16 +21,20 @@ const About = () => {
         <Text fontSize={{ base: "xl", md: "2xl" }} mt={4} mb={{ base: 3, md: 0 }}>
           In pursuit of my dream job as a Full Stack Web Developer, I attended the Kodego bootcamp to expand my skill set and knowledge. The bootcamp was a valuable learning experience that helped me sharpen my coding abilities and gain practical experience working on real-world projects.
         </Text>
-        <Button
+        <HStack mt={8}>
+          <Button
           as="a"
           href="/Resume.pdf"
           download="ElmoNickolLaplap_Resume.pdf"
           colorScheme={colorMode === "light" ? "blue" : "teal"}
           size="lg"
-          mt={8}
+          
         >
           Download Resume
         </Button>
+        <BuyMeACoffeeButton />
+        </HStack>
+        
       </Box>
     </Stack>
   );
