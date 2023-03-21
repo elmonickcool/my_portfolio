@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className="mb-7">
-      <div className="flex items-center justify-between flex-wrap p-6">
+      <div className="flex items-center justify-between flex-row p-6">
         <div className="flex items-center flex-shrink-0 mr-6 flex-grow">
           <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
             <a>
