@@ -4,11 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 import { useColorMode, Box, Flex, Center, VStack, Spacer, Stack, Text, Image } from "@chakra-ui/react";
 
 const Hero = () => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: 'gray.100', dark: 'gray.700' };
   const textSize = ['2xl', '2xl', '3xl'];
   return (
-    <Box bg={bgColor[colorMode]} borderRadius='lg'>
+    
       <Flex direction={['column', 'column', 'row']} align={['center', 'stretch', 'stretch']}>
         <Box p={5} ms={5}>
           <Center h="full">
@@ -43,11 +41,11 @@ const Hero = () => {
         <Spacer />
         <Stack direction={['column', 'column', 'row']} spacing={8} align={['center', 'center', 'flex-start']} mt={[8, 8, 0]}>
           <Box>
-            <Image src="/hero.png" width={500} height={600} alt="landing image"/>
+            <Image src="/hero.png" width={700} height={700} alt="landing image"/>
           </Box>
         </Stack>
       </Flex>
-    </Box>
+    
   );
 };
 
