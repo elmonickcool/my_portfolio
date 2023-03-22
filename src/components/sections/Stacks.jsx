@@ -1,4 +1,38 @@
-import { Text, Box, Image, Grid, Heading } from "@chakra-ui/react";
+import { Box, Grid, Heading, Image, Text } from "@chakra-ui/react";
+
+const TECH_STACK = [
+  {
+    title: "Front End",
+    items: [
+      { src: "/html5.svg", alt: "HTML5 Logo" },
+      { src: "/css3.svg", alt: "CSS3 Logo" },
+      { src: "/javascript.svg", alt: "JavaScript Logo" },
+      { src: "/react.svg", alt: "React Logo" },
+      { src: "/bootstrap.svg", alt: "Bootstrap Logo" },
+      { src: "/tailwind.svg", alt: "Tailwind CSS Logo" },
+    ],
+  },
+  {
+    title: "Back End",
+    items: [
+      { src: "/php.svg", alt: "PHP logo" },
+      { src: "/laravel.svg", alt: "Laravel logo" },
+      { src: "/nodejs.svg", alt: "Node.js logo" },
+      { src: "/python.svg", alt: "Python logo" },
+      { src: "/firebase.svg", alt: "Firebase logo" },
+      { src: "/mysql.svg", alt: "MySQL logo" },
+    ],
+  },
+  {
+    title: "Other Tools",
+    items: [
+      { src: "/figma.svg", alt: "Figma logo" },
+      { src: "/photoshop.svg", alt: "Photoshop logo" },
+      { src: "/postman.svg", alt: "Postman logo" },
+      { src: "/git.svg", alt: "Git logo" },
+    ],
+  },
+];
 
 const Stacks = () => {
   return (
@@ -11,108 +45,23 @@ const Stacks = () => {
         gap={6}
         my={8}
       >
-        <Box textAlign="center" border="1px" p={6} borderRadius="md">
-          <Text fontSize="2xl" p={5} mb={3}>
-            Front End
-          </Text>
-          <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gridGap={6}>
-            <Image
-              src="/html5.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="HTML5 Logo"
-            />
-            <Image
-              src="/css3.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="CSS3 Logo"
-            />
-            <Image
-              src="/javascript.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="JavaScript Logo"
-            />
-            <Image
-              src="/react.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="React Logo"
-            />
-            <Image
-              src="/bootstrap.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Bootstrap Logo"
-            />
-            <Image
-              src="/tailwind.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Tailwind CSS Logo"
-            />
+        {TECH_STACK.map(({ title, items }) => (
+          <Box key={title} textAlign="center" border="1px" p={6} borderRadius="md">
+            <Text fontSize="2xl" p={5} mb={3}>
+              {title}
+            </Text>
+            <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gridGap={6}>
+              {items.map(({ src, alt }) => (
+                <Image
+                  key={src}
+                  src={src}
+                  boxSize={["50px", "70px", "100px"]}
+                  alt={alt}
+                />
+              ))}
+            </Box>
           </Box>
-        </Box>
-        <Box textAlign="center" border="1px" p={6} borderRadius="md">
-          <Text fontSize="2xl" p={5} mb={3}>
-            Back End
-          </Text>
-          <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gridGap={6}>
-            <Image
-              src="/php.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="PHP logo"
-            />
-            <Image
-              src="/laravel.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Laravel logo"
-            />
-            <Image
-              src="/nodejs.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Node.js logo"
-            />
-            <Image
-              src="/python.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Python logo"
-            />
-            <Image
-              src="/firebase.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Firebase logo"
-            />
-            <Image
-              src="/mysql.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="MySQL logo"
-            />
-          </Box>
-          
-        </Box>
-        <Box textAlign="center" border="1px" p={6} borderRadius="md">
-          <Text fontSize="2xl" p={5} mb={3}>
-            Other Tools
-          </Text>
-          <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gridGap={6}>
-            <Image
-              src="/figma.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="PHP logo"
-            />
-            <Image
-              src="/photoshop.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Laravel logo"
-            />
-            <Image
-              src="/postman.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Node.js logo"
-            />
-            <Image
-              src="/git.svg"
-              boxSize={["50px", "70px", "100px"]}
-              alt="Python logo"
-            />
-          </Box>
-        </Box>
+        ))}
       </Grid>
     </Box>
   );
