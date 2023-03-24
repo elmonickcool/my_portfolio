@@ -12,10 +12,11 @@ const Project = () => {
   const bgColor = { light: 'gray.100', dark: 'gray.700' };
   const columns = useBreakpointValue({ base: 1, sm: 2, md: 3 });
   return (
-    <Box display="flex" justifyContent="center" alignItems="center">
-      <Heading textAlign='center' fontSize='4xl' mb='5'>
+    <>
+    <Heading textAlign='center' fontSize='4xl' mb='5'>
         My Latest Project
       </Heading>
+      <Box display="flex" justifyContent="center" alignItems="center">
       <SimpleGrid columns={columns} spacing={5}>
         {Showcase.map((projectShowcase, index) => {
           return (
@@ -68,6 +69,8 @@ const Project = () => {
         })}
       </SimpleGrid>
     </Box>
+    </>
+    
 
   )
 }
