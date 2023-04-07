@@ -71,8 +71,8 @@ const Contact = () => {
 
     return (
         <>
-            <Flex flexDirection={["column", "row"]} justifyContent="space-around" alignItems={["center", "flex-start"]}>
-                <Box w='50%' textAlign={["center", "left"]}>
+            <Flex flexDirection={["column", "row"]} justifyContent={["center","space-around"]} alignItems={["center", "flex-start"]}>
+                <Box w={["100%","50%"]} textAlign={["center", "left"]}>
                     {formSubmitted ? (
                         <Heading size='lg' mb={8}>Thank you for filling out the form. I will reply to you via email.</Heading>
                     ) : (
@@ -80,7 +80,7 @@ const Contact = () => {
                     )
                     }
                     <form onSubmit={handleSubmit}>
-                        <Box>
+                        <Box mb={5} ms={3} me={3}>
                             <FormControl>
                                 <FormLabel>Name</FormLabel>
                                 <Input type='text' name='name' value={name} onChange={handleChange} />
@@ -98,12 +98,12 @@ const Contact = () => {
                                 <Textarea name='message' value={message} onChange={handleChange} />
                             </FormControl>
                         </Box>
-                        <Button type='submit' onClick={handleSubmit} mt={5} w='100%'>
+                        <Button type='submit' onClick={handleSubmit} mt={5} w={["50%","100%"]}>
                             Send Message
                         </Button>
                     </form>
                 </Box>
-                <Box border="1px" borderRadius={5} p={5}>
+                <Box border="1px" borderRadius={5} p={5} ml={[0,5]} mt={[10,0]}>
                     <Heading mb={5} >Contact Information</Heading>
                     <Box me={5} textAlign={["center", "left"]}>
                         <Text mt={5}>

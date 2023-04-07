@@ -1,7 +1,7 @@
 import { Text, Box, Image, useBreakpointValue } from "@chakra-ui/react";
 
 const Overview = () => {
-  const showImage = useBreakpointValue({ base: false, md: true });
+  const showImage = useBreakpointValue({ base: false, md: true, lg: true, xl: true, "2xl": true, 770: false });
   const flexDir = useBreakpointValue({ base: "column", md: "row" });
   const align = useBreakpointValue({ base: "center", md: "stretch" });
 
