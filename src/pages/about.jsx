@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }} justifyContent={{ base: "center", md: "flex-start" }}  me={3}>
-      <Image src="/elmonickol.jpg" width="100%" height="100%" ms={4} alt="about image" borderRadius="lg" boxShadow="lg" />
+      <Image src="/elmonickol.jpg" width="30%" height="30%" ms={4} me={5} alt="about image" borderRadius="lg" boxShadow="lg" />
       <Box ms={5} textAlign={{ base: "center", md: "left" }}>
         <Text fontSize="3xl" fontWeight="bold" textAlign="center" mb={5}>
           About Me
