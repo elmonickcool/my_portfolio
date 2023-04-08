@@ -10,11 +10,11 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 const Project = () => {
   const { colorMode } = useColorMode();
   const bgColor = { light: 'gray.100', dark: 'gray.700' };
-  const columns = useBreakpointValue({ base: 1, sm: 2, md: 3 });
+  const columns = useBreakpointValue({ base: 1, sm: 2, md: 4 });
   return (
     <>
     <Heading textAlign='center' fontSize='4xl' mb='5'>
-        My Latest Project
+        My Project
       </Heading>
       <Box display="flex" justifyContent="center" alignItems="center">
       <SimpleGrid columns={columns} spacing={5}>

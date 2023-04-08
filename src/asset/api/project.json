@@ -39,5 +39,18 @@
       "CSS",
       "Bootstrap"
     ]
+  },
+  {
+    "id": 4,
+    "title": "Netflix Clone",
+    "description": "Netflix Clone is a web application that replicates the popular streaming service, allowing users to sign up, browse a large catalog of movies and TV shows, search and filter by different criteria, and seamlessly stream their chosen content in high-quality playback.",
+    "github": "https://github.com/elmonickcool/my-netflix-clone-app",
+    "live": "https://my-netflix-clone-app.vercel.app/",
+    "img":"netflix_clone_page.png",
+    "stack":[
+      "NextJS",
+      "TailwindCSS",
+      "Firebase"
+    ]
   }
 ]
