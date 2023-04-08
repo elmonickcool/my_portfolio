@@ -13,12 +13,12 @@ config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   const { colorMode } = useColorMode()
-  const color = colorMode === "light" ? "gray.800" : "white"
+  const color = colorMode === "light" ? "black" : "white"
   
   return (
     <ChakraProvider theme={theme}>
       <Head />
-      <Layout bg="white" color={color}>
+      <Layout bg="black" color={color}>
           <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
