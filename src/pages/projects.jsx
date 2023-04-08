@@ -30,7 +30,7 @@ const Project = () => {
                     <Heading size='md'>
                       {projectShowcase.title}
                     </Heading>
-                    <Text>
+                    <Text textAlign='justify'>
                       {projectShowcase.description}
                     </Text>
                     <Text>
@@ -51,7 +51,7 @@ const Project = () => {
                       <Button as="a" href={projectShowcase.live} target="_blank" rel="noopener noreferrer" variant='outline' leftIcon={<FontAwesomeIcon icon={faGlobe} className={`text-3xl ${colorMode === "light" ? "text-black" : "text-white"}`} />}>Live Demo</Button>
                     </Link>
                     <Link as={NextLink} href={projectShowcase.github}  _hover={{ textDecoration: 'none' }}>
-                      <Button as="a" href={projectShowcase.github} target="_blank" rel="noopener noreferrer" variant='outline' leftIcon={<FontAwesomeIcon icon={faGithub} className={`text-3xl ${colorMode === "light" ? "text-black" : "text-white"}`} />}>Github Repo</Button>
+                      <Button as="a" href={projectShowcase.github} target="_blank" rel="noopener noreferrer" variant='outline' leftIcon={<FontAwesomeIcon icon={faGithub} className={`text-3xl ${colorMode === "light" ? "text-black" : "text-white"}`} />}>Repository</Button>
                     </Link>
                   </Stack>
                 </CardFooter>
