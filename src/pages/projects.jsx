@@ -8,7 +8,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Project = () => {
   const { colorMode } = useColorMode();
-  const bgColor = { light: 'gray.100', dark: 'gray.700' };
+  const bgColor = { light: 'gray.100', dark: 'blackAlpha.500' };
   const columns = useBreakpointValue({ base: 1, sm: 2, md: 4 });
   return (
     <>
