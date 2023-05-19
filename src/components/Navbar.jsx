@@ -5,15 +5,10 @@ import DarkModeSwitch from "../components/ui/DarkModeSwitch";
 import { useRouter } from 'next/router';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
-
-
-
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  
-
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
@@ -55,37 +50,37 @@ const Navbar = () => {
         </div>
         <div className={`w-full ${isOpen || !isMobile ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto`}>
           <div className={`text-sm ${isMobile ? 'block' : 'flex'} lg:flex-grow`}>
-            <div className={`${isMobile ? '' : 'flex justify-end'}`}>           
-            <ScrollLink
-          to="projects"
-          smooth={true}
-          duration={500}
-          className={`block text-xl mr-4  ${isActive('/projects') ? 'font-bold ' : 'font-medium'} cursor-pointer`}
-          onClick={scrollToTop}
-        >
-          Projects
-        </ScrollLink>
-        <ScrollLink
-          to="about"
-          smooth={true}
-          duration={500}
-          className={`block text-xl  mr-4 ${isActive('/about') ? 'font-bold ' : 'font-medium'} cursor-pointer`}
-          onClick={scrollToTop}
-        >
-          About
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          smooth={true}
-          duration={500}
-          className={`block text-xl  mr-4 ${isActive('/contact') ? 'font-bold' : 'font-medium'} cursor-pointer`}
-          onClick={scrollToTop}
-        >
-          Contact
-        </ScrollLink>
+            <div className={`${isMobile ? '' : 'flex justify-end'}`}>
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                className={`block text-xl mr-4  ${isActive('/projects') ? 'font-bold ' : 'font-medium'} cursor-pointer`}
+                onClick={scrollToTop}
+              >
+                Projects
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                className={`block text-xl  mr-4 ${isActive('/about') ? 'font-bold ' : 'font-medium'} cursor-pointer`}
+                onClick={scrollToTop}
+              >
+                About
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                className={`block text-xl  mr-4 ${isActive('/contact') ? 'font-bold' : 'font-medium'} cursor-pointer`}
+                onClick={scrollToTop}
+              >
+                Contact
+              </ScrollLink>
             </div>
           </div>
-          <DarkModeSwitch/>
+          <DarkModeSwitch />
         </div>
       </nav>
     </div>
