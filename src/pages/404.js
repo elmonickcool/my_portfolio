@@ -10,10 +10,7 @@ const NotFoundPage = () => {
           Use the search box or the links below to explore our amazing
           application
         </p>
-        <input
-          type='search'
-          placeholder='Just a dummy search box...'
-        />
+        
         <div>
           <Link href='/'>
             Homepage
