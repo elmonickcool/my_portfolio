@@ -1,11 +1,13 @@
 import { Stack, Text, Image, Box, Button,HStack } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
+import Stacks from "../components/sections/Stacks"
 
 const About = () => {
   const { colorMode } = useColorMode();
 
   return (
+    <>
     <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }} justifyContent={{ base: "center", md: "flex-start" }}  me={3}>
       <Image src="/elmonickol.jpg" width="30%" height="30%" ms={4} me={5} alt="about image" borderRadius="lg" boxShadow="lg" />
       <Box ms={5} textAlign={{ base: "center", md: "left" }}>
@@ -28,15 +30,16 @@ const About = () => {
           download="ElmoNickolLaplap_Resume.pdf"
           colorScheme={colorMode === "light" ? "blue" : "teal"}
           size="lg"
-          
         >
           Download Resume
         </Button>
         <BuyMeACoffeeButton />
         </HStack>
-        
       </Box>
     </Stack>
+    <Stacks/>
+    </>
+    
   );
 };
 
