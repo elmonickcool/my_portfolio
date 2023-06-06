@@ -15,7 +15,7 @@ const About = () => {
             About Me
           </Text>
           <Text fontSize={{ base: "xl", md: "2xl" }} mt={4} mb={{ base: 3, md: 0 }}>
-            Welcome to my portfolio website! I'm Elmo Nickol Laplap, a 26-year-old Full Stack Web Developer from Quezon, Bukidnon. 
+            Welcome to my portfolio website! I&apos;m Elmo Nickol Laplap, a 26-year-old Full Stack Web Developer from Quezon, Bukidnon. 
             I graduated from Xavier University - Ateneo de Cagayan in 2019 with a BS in Information Systems. 
             With expertise in PHP, JavaScript, Python, and Java, I continuously learn and stay updated in the field. 
             My goal is to create innovative web applications that offer exceptional user experiences. 
