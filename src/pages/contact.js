@@ -72,7 +72,7 @@ const Contact = () => {
     return (
         <>
             <Flex flexDirection={["column", "row"]} justifyContent={["center","space-around"]} alignItems={["center", "flex-start"]}>
-                <Box w={["100%","50%"]} textAlign={["center", "left"]}>
+                <Box w={["100%","50%"]} textAlign={["center", "left"]} bg='white' p={5} borderRadius={3}> 
                     {formSubmitted ? (
                         <Heading size='lg' mb={8}>Thank you for filling out the form. I will reply to you via email.</Heading>
                     ) : (
@@ -103,7 +103,7 @@ const Contact = () => {
                         </Button>
                     </form>
                 </Box>
-                <Box border="1px" borderRadius={5} p={5} ml={[0,5]} mt={[10,0]}>
+                <Box border="1px" borderRadius={5} p={5} ml={[0,5]} mt={[10,0]} bg='white'>
                     <Heading mb={5} >Contact Information</Heading>
                     <Box me={5} textAlign={["center", "left"]}>
                         <Text mt={5}>
