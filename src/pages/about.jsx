@@ -1,15 +1,20 @@
-import { Stack, Text, Image, Box, Button, HStack } from "@chakra-ui/react";
+import { Stack, Text, Image, Box, Button, HStack, useBreakpointValue } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
 import Stacks from "../components/sections/Stacks"
 
 const About = () => {
   const { colorMode } = useColorMode();
+  
+  // Determine if the image should be displayed based on screen size
+  const shouldDisplayImage = useBreakpointValue({ base: false, md: true });
 
   return (
     <>
       <Stack direction={{ base: "column", md: "row" }} spacing={8} alignItems={{ md: "center" }} justifyContent={{ base: "center", md: "flex-start" }} me={3} className="h-full">
-        <Image src="/elmonickol.jpg" width="30%" height="30%" ms={4} me={5} alt="about image" borderRadius="lg" boxShadow="lg" />
+        {shouldDisplayImage && (
+          <Image src="/elmonickol.jpg" width="30%" height="30%" ms={4} me={5} alt="about image" borderRadius="lg" boxShadow="lg" />
+        )}
         <Box ms={5} textAlign={{ base: "center", md: "left" }}>
           <Text fontSize="3xl" fontWeight="bold" textAlign="center" mb={5}>
             About Me
@@ -37,7 +42,6 @@ const About = () => {
       </Stack>
       <Stacks />
     </>
-
   );
 };
 
