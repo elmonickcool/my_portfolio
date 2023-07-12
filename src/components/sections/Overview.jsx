@@ -31,7 +31,7 @@ const Overview = () => {
         <Text fontSize={["xl", "2xl"]} lineHeight="tall">
           I am a highly motivated software engineer with a passion for innovative software solutions.
           I have extensive experience developing web applications, APIs, and database-driven
-          software using frameworks such as React and Laravel, as well as languages such as PHP, Javascript, and MySQL.
+          software using frameworks such as React and Laravel, as well as languages such as PHP, Javascript, Java, Python and MySQL.
         </Text>
       </Box>
     </Box>
