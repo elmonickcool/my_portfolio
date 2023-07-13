@@ -42,8 +42,19 @@ const Hero = () => {
       <Spacer />
 
       <Stack direction={['column', 'column', 'row']} spacing={8} align={['center', 'center', 'flex-start']} mt={[8, 8, 0]}>
-        <Box>
-          <Image src="/hero.png"  alt="landing image" style={{position: 'relative', zIndex: 1}} />
+        <Box position="relative">
+          <Box
+            position="absolute"
+            top={0}
+            left={0}
+            width="100%"
+            height="100%"
+            backgroundColor="#202A44" 
+            borderRadius="20%" 
+            opacity="50%" 
+            zIndex={-1} 
+          />
+          <Image src="/hero.png" alt="landing image" />
         </Box>
       </Stack>
     </Flex>
@@ -51,4 +62,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
