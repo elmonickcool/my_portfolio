@@ -18,7 +18,7 @@ const NotFoundPage = () => {
           <Link href='/latest'>
             Latest Products
           </Link>
-          <Link href='/contact'>
+          <Link href='/contact_list'>
             Contact US
           </Link>
         </div>
