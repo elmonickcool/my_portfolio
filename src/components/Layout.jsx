@@ -1,6 +1,6 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { PropagateLoader } from 'react-spinners'
+import { MoonLoader } from 'react-spinners'
 import { Box, useColorMode } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 5000)
   }, [])
   
   return (
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
             alignItems="center"
             justifyContent="center"
           >
-            <PropagateLoader color={spinnerColor} size={20} />
+            <MoonLoader color={spinnerColor} />
           </Box>
         ) : (
           <div className='md:container md:mx-auto'>
