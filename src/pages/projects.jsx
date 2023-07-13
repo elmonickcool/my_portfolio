@@ -9,6 +9,7 @@ import {
   useColorMode,
   useBreakpointValue,
   Flex,
+  Image,
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -44,12 +45,14 @@ const Project = () => {
                 <Box
                   maxW="sm"
                   bg={bgColor[colorMode]}
+                  borderRadius="5%"
+                  pt={2.5}
                   boxShadow="md"
                   transition="transform 0.2s"
                   _hover={{ transform: 'scale(1.05)' }}
                 >
-                  <Box>
-                    <img src={project.img} alt="Project" />
+                  <Box m={3} >
+                    <Image src={project.img} borderRadius="2.5%" alt="Project" />
                   </Box>
                   <Box p={6}>
                     <Heading size="md">{project.title}</Heading>
@@ -79,7 +82,9 @@ const Project = () => {
                             <FontAwesomeIcon
                               icon={faGlobe}
                               className={`text-3xl ${
-                                colorMode === 'light' ? 'text-black' : 'text-white'
+                                colorMode === 'light'
+                                  ? 'text-black'
+                                  : 'text-white'
                               }`}
                             />
                           }
@@ -97,7 +102,9 @@ const Project = () => {
                             <FontAwesomeIcon
                               icon={faGithub}
                               className={`text-3xl ${
-                                colorMode === 'light' ? 'text-black' : 'text-white'
+                                colorMode === 'light'
+                                  ? 'text-black'
+                                  : 'text-white'
                               }`}
                             />
                           }
