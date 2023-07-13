@@ -129,7 +129,7 @@ const Contact = () => {
             </Link>
             <Link href="https://goo.gl/maps/XAoQcfPffVfVD83c8">
               <Text mt={5}>
-                {getFontAwesomeIcon(faLocationDot)} Balangay 2, Poblacion, Quezon, Bukidnon
+                {getFontAwesomeIcon(faLocationDot)} Quezon, Bukidnon
               </Text>
             </Link>
           </Box>
