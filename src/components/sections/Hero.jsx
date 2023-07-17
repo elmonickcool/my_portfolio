@@ -49,12 +49,13 @@ const Hero = () => {
             position="absolute"
             top={0}
             left={0}
-            width="100%"
+            width="95%"
             height="100%"
             backgroundColor="#202A44" 
-            borderRadius="20%" 
+            borderRadius="10%" 
             opacity="50%" 
             zIndex={-1} 
+            ms={3}
           />
           <Image src="/hero.png" alt="landing image" />
         </Box>
