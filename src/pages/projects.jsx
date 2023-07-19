@@ -4,7 +4,6 @@ import {
   Heading,
   SimpleGrid,
   Badge,
-  Link,
   Button,
   useColorMode,
   useBreakpointValue,
@@ -79,8 +78,10 @@ const Project = () => {
                   <Box mt={4}>
                     <Flex justifyContent="space-between">
                       <Button
-                        as={Link}
                         href={project.live}
+                        bg={
+                          colorMode === 'light' ? 'gray.300' : 'blackAlpha.500'
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         variant="outline"
@@ -97,8 +98,10 @@ const Project = () => {
                         Live Demo
                       </Button>
                       <Button
-                        as={Link}
                         href={project.github}
+                        bg={
+                          colorMode === 'light' ? 'gray.300' : 'blackAlpha.500'
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         variant="outline"
