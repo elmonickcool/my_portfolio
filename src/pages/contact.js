@@ -97,21 +97,21 @@ const Contact = () => {
                 <Heading textAlign="center" mb={8}>Get in touch</Heading>
                 <FormControl>
                   <FormLabel>Name</FormLabel>
-                  <Input type="text" border="1px" name="name" value={name} onChange={handleChange} />
+                  <Input type="text" border="1px" name="name" value={name} onChange={handleChange} placeholder="Enter your name"/>
                 </FormControl>
                 <FormControl>
                   <FormLabel>Email</FormLabel>
-                  <Input type="email" border="1px" name="email" value={email} onChange={handleChange} />
+                  <Input type="email" border="1px" name="email" value={email} onChange={handleChange} placeholder="Enter your email"/>
                 </FormControl>
                 <FormControl>
                   <FormLabel>Contact Number</FormLabel>
-                  <Input type="number" pattern="[0-9]*" inputMode="numeric" border="1px" name="contactnum" value={contactnum} onChange={handleChange} />
+                  <Input type="number" pattern="[0-9]*" inputMode="numeric" border="1px" name="contactnum" value={contactnum} onChange={handleChange} placeholder="Enter your contact number"/>
                 </FormControl>
                 <FormControl>
                   <FormLabel>Message</FormLabel>
-                  <Textarea name="message" border="1px" value={message} onChange={handleChange} />
+                  <Textarea name="message" border="1px" value={message} onChange={handleChange} placeholder="Enter your message"/>
                 </FormControl>
-                <Button type="submit" onClick={handleSubmit} mt={5} w={["50%", "100%"]}>Send Message</Button>
+                <Button type="submit" onClick={handleSubmit} mt={5} w={["50%", "100%"]}>Submit</Button>
               </form>
             )}
           </Box>
