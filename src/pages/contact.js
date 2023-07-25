@@ -86,7 +86,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <Flex height="100vh" justifyContent="center" flexDirection="column">
       <Flex flexDirection={["column", "row"]} justifyContent={["center", "space-around"]} alignItems={["center", "flex-start"]}>
         <Box w={["100%", "50%"]} textAlign={["center", "left"]} p={5} borderRadius={3}>
           <Box mb={5} ms={3} me={3} border="1px" p={5} borderRadius={2}>
@@ -135,7 +135,7 @@ const Contact = () => {
           </Box>
         </Box>
       </Flex>
-    </>
+    </Flex>
   );
 }
 

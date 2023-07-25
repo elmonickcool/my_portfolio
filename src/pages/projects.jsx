@@ -32,7 +32,7 @@ const Project = () => {
   const gridColumns = useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 4 });
 
   return (
-    <>
+    <Flex height="100vh" alignItems="center" justifyContent="center" flexDirection="column">
       <Heading textAlign="center" fontSize="4xl" mb="5">
         My Project
       </Heading>
@@ -129,7 +129,7 @@ const Project = () => {
           </Box>
         )}
       </SimpleGrid>
-    </>
+    </Flex>
   );
 };
 
