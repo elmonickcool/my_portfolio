@@ -29,7 +29,7 @@ const Project = () => {
   };
 
   // Determine the number of columns based on screen size
-  const gridColumns = useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 4 });
+  const gridColumns = useBreakpointValue({ base: 1, sm: 2, md: 4, lg: 4 });
 
   return (
     <>
