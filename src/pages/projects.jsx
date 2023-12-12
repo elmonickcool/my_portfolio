@@ -1,20 +1,21 @@
 import { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import {
   Box,
   Heading,
-  SimpleGrid,
   Badge,
   Button,
   useColorMode,
-  useBreakpointValue,
   Flex,
   Image,
+  useBreakpointValue 
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
-
 import projectShowcaseData from '../asset/api/project.json';
 
 const Project = () => {
@@ -28,24 +29,26 @@ const Project = () => {
     router.push(url);
   };
 
-  // Determine the number of columns based on screen size
-  const gridColumns = useBreakpointValue({ base: 1, sm: 2, md: 4, lg: 4 });
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 4 }),
+    slidesToScroll:1,
+  };
+    
 
   return (
     <>
       <Heading textAlign="center" fontSize="4xl" mb="5">
         My Project
       </Heading>
-      <SimpleGrid columns={gridColumns} spacing={5} justifyContent="center" alignItems="center">
+      <Slider {...settings}>
         {projectShowcase.length > 0 ? (
           projectShowcase.map((project) => (
-            <article
+            <Box
               key={project.title}
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+              style={{ display: 'flex', justifyContent: 'center' }}
             >
               <Box
                 maxW="sm"
@@ -121,14 +124,14 @@ const Project = () => {
                   </Box>
                 </Box>
               </Box>
-            </article>
+            </Box>
           ))
         ) : (
           <Box textAlign="center" fontSize="xl">
             No project showcases found.
           </Box>
         )}
-      </SimpleGrid>
+      </Slider>
     </>
   );
 };
