@@ -30,8 +30,10 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
     "react-spinners": "^0.13.8",
     "react-type-animation": "^2.1.2",
+    "slick-carousel": "^1.8.1",
     "typewriter-effect": "^2.19.0",
     "uuid": "^9.0.0"
   },
