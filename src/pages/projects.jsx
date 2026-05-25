@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { useState } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import {
   Box,
   Heading,
@@ -10,130 +10,125 @@ import {
   useColorMode,
   Flex,
   Image,
-  useBreakpointValue 
-} from '@chakra-ui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { useRouter } from 'next/router';
-import projectShowcaseData from '../asset/api/project.json';
+  Text,
+  VStack,
+  HStack,
+  useBreakpointValue,
+} from "@chakra-ui/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { useRouter } from "next/router"
+import projectShowcaseData from "../asset/api/project.json"
 
 const Project = () => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: 'gray.100', dark: 'blackAlpha.500' };
-  const router = useRouter();
+  const { colorMode } = useColorMode()
+  const router = useRouter()
+  const [projectShowcase] = useState(projectShowcaseData)
 
-  const [projectShowcase, setProjectShowcase] = useState(projectShowcaseData);
-
-  const handleLinkClick = (url) => {
-    router.push(url);
-  };
+  const slidesToShow = useBreakpointValue({
+    base: 1,
+    sm: 1,
+    md: 2,
+    lg: 3,
+  })
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 4 }),
-    slidesToScroll:1,
-  };
-    
+    slidesToShow: slidesToShow || 1,
+    slidesToScroll: 1,
+    arrows: false,
+  }
+
+  const cardBg = {
+    light: "white",
+    dark: "gray.800",
+  }
+
+  const handleLinkClick = (url) => {
+    window.open(url, "_blank")
+  }
 
   return (
-    <>
-      <Heading textAlign="center" fontSize="4xl" mb="5">
-        My Project
+    <Box px={{ base: 4, md: 10 }} py={10}>
+      <Heading textAlign="center" fontSize={{ base: "2xl", md: "4xl" }} mb={8}>
+        My Projects
       </Heading>
-      <Slider {...settings}>
-        {projectShowcase.length > 0 ? (
-          projectShowcase.map((project) => (
-            <Box
-              key={project.title}
-              style={{ display: 'flex', justifyContent: 'center' }}
-            >
-              <Box
-                maxW="sm"
-                bg={bgColor[colorMode]}
-                borderRadius="5%"
-                pt={2.5}
-                boxShadow="md"
-                transition="transform 0.2s"
-                _hover={{ transform: 'scale(1.05)' }}
-              >
-                <Box m={3}>
-                  <Image src={project.img} borderRadius="2.5%" alt="Project" />
-                </Box>
-                <Box p={6}>
-                  <Heading size="md">{project.title}</Heading>
-                  <Box mt={4}>
-                    <p>{project.description}</p>
-                  </Box>
-                  <Box mt={4}>
-                    {Array.isArray(project.stack) ? (
-                      project.stack.map((stack, index) => (
-                        <Badge key={index} m="1">
-                          {stack.trim()}
-                        </Badge>
-                      ))
-                    ) : (
-                      <Badge>{project.stack}</Badge>
-                    )}
-                  </Box>
-                  <Box mt={4}>
-                    <Flex justifyContent="space-between">
-                      <Button
-                        href={project.live}
-                        bg={
-                          colorMode === 'light' ? 'gray.300' : 'blackAlpha.500'
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="outline"
-                        leftIcon={
-                          <FontAwesomeIcon
-                            icon={faGlobe}
-                            className={`text-3xl ${
-                              colorMode === 'light' ? 'text-black' : 'text-white'
-                            }`}
-                          />
-                        }
-                        onClick={() => handleLinkClick(project.live)}
-                      >
-                        Live Demo
-                      </Button>
-                      <Button
-                        href={project.github}
-                        bg={
-                          colorMode === 'light' ? 'gray.300' : 'blackAlpha.500'
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="outline"
-                        leftIcon={
-                          <FontAwesomeIcon
-                            icon={faGithub}
-                            className={`text-3xl ${
-                              colorMode === 'light' ? 'text-black' : 'text-white'
-                            }`}
-                          />
-                        }
-                        onClick={() => handleLinkClick(project.github)}
-                      >
-                        Repository
-                      </Button>
-                    </Flex>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          ))
-        ) : (
-          <Box textAlign="center" fontSize="xl">
-            No project showcases found.
-          </Box>
-        )}
-      </Slider>
-    </>
-  );
-};
 
-export default Project;
+      <Slider {...settings}>
+        {projectShowcase.map((project, index) => (
+          <Box key={index} px={3}>
+            <Box
+              bg={cardBg[colorMode]}
+              borderRadius="xl"
+              overflow="hidden"
+              boxShadow="lg"
+              transition="0.3s"
+              _hover={{ transform: "translateY(-8px)", boxShadow: "2xl" }}
+              h="100%"
+            >
+              {/* Image */}
+              <Box h="180px" overflow="hidden">
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  objectFit="cover"
+                  w="100%"
+                  h="100%"
+                />
+              </Box>
+
+              {/* Content */}
+              <VStack align="start" spacing={3} p={5}>
+                <Heading size="md">{project.title}</Heading>
+
+                <Text fontSize="sm" color="gray.500">
+                  {project.description}
+                </Text>
+
+                {/* Stack */}
+                <Flex wrap="wrap" gap={2}>
+                  {Array.isArray(project.stack) ? (
+                    project.stack.map((stack, i) => (
+                      <Badge key={i} colorScheme="purple" fontSize="0.7em">
+                        {stack}
+                      </Badge>
+                    ))
+                  ) : (
+                    <Badge colorScheme="purple">{project.stack}</Badge>
+                  )}
+                </Flex>
+
+                {/* Buttons */}
+                <HStack w="100%" pt={2} spacing={3}>
+                  <Button
+                    size="sm"
+                    flex={1}
+                    leftIcon={<FontAwesomeIcon icon={faGlobe} />}
+                    onClick={() => handleLinkClick(project.live)}
+                  >
+                    Live
+                  </Button>
+
+                  <Button
+                    size="sm"
+                    flex={1}
+                    variant="outline"
+                    leftIcon={<FontAwesomeIcon icon={faGithub} />}
+                    onClick={() => handleLinkClick(project.github)}
+                  >
+                    Code
+                  </Button>
+                </HStack>
+              </VStack>
+            </Box>
+          </Box>
+        ))}
+      </Slider>
+    </Box>
+  )
+}
+
+export default Project
