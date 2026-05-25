@@ -1,5 +1,5 @@
 import { Stack, Text, Image, Box, Button, HStack, useBreakpointValue } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/color-mode";
+import { useColorMode } from "@chakra-ui/react"
 import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
 import Stacks from "../components/sections/Stacks";
 
