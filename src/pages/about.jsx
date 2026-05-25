@@ -1,77 +1,96 @@
-import { Stack, Text, Image, Box, Button, HStack, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Stack,
+  Text,
+  Image,
+  Box,
+  Button,
+  HStack,
+  useBreakpointValue,
+  Heading,
+  VStack,
+  Divider,
+} from "@chakra-ui/react"
 import { useColorMode } from "@chakra-ui/react"
-import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton";
-import Stacks from "../components/sections/Stacks";
+import BuyMeACoffeeButton from "@/components/ui/BuyMeACoffeeButton"
+import Stacks from "../components/sections/Stacks"
 
 const About = () => {
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode()
 
-  // Determine if the image should be displayed based on screen size
-  const shouldDisplayImage = useBreakpointValue({ base: false, md: true });
+  const showImage = useBreakpointValue({ base: false, md: true })
 
   return (
-    <Box p={4}>
+    <Box px={{ base: 5, md: 16 }} py={10}>
       <Stack
         direction={{ base: "column", md: "row" }}
-        spacing={8}
-        alignItems={{ md: "center" }}
-        justifyContent={{ base: "center", md: "flex-start" }}
-        me={3}
-        className="h-full"
+        spacing={{ base: 10, md: 16 }}
+        align="center"
       >
-        {shouldDisplayImage && (
-          <Image
-            src="/elmonickol.jpg"
-            width="30%"
-            height="30%"
-            ms={4}
-            me={5}
-            alt="about image"
-            borderRadius="lg"
-            boxShadow="lg"
-          />
+        {/* IMAGE */}
+        {showImage && (
+          <Box flex="1" display="flex" justifyContent="center">
+            <Image
+              src="/elmonickol.jpg"
+              alt="About Me"
+              borderRadius="2xl"
+              boxShadow="2xl"
+              objectFit="cover"
+              w={{ base: "200px", md: "300px" }}
+              h={{ base: "200px", md: "300px" }}
+            />
+          </Box>
         )}
-        <Box ms={5} textAlign={{ base: "center", md: "left" }}>
-          <Text fontSize="3xl" fontWeight="bold" textAlign="center" mb={5}>
-            About Me
-          </Text>
-          <Stack spacing={4}>
-            <Text fontSize={{ base: "xl", md: "2xl" }} mt={4} mb={{ base: 3, md: 0 }}>
-              Name: Elmo Nickol Laplap
+
+        {/* TEXT */}
+        <Box flex="2">
+          <VStack align={{ base: "center", md: "start" }} spacing={4}>
+            <Heading fontSize={{ base: "2xl", md: "4xl" }}>
+              About Me
+            </Heading>
+
+            <Text fontSize={{ base: "md", md: "lg" }} color="gray.500" textAlign={{ base: "center", md: "left" }}>
+              Developer focused on building clean, fast, and user-friendly web applications.
             </Text>
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              Age: 26
-            </Text>
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              Location: Quezon, Bukidnon
-            </Text>
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              Education: Xavier University - Ateneo de Cagayan, BS in Information Systems (2019)
-            </Text>
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              Expertise: PHP, JavaScript, Python, Java
-            </Text>
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              Goal: To create innovative web applications that offer exceptional user experiences
-            </Text>
-          </Stack>
-          <HStack mt={8}>
-            <Button
-              as="a"
-              href="/Resume.pdf"
-              download="ElmoNickolLaplap_Resume.pdf"
-              colorScheme={colorMode === "light" ? "blue" : "teal"}
-              size="lg"
-            >
-              Download Resume
-            </Button>
-            <BuyMeACoffeeButton />
-          </HStack>
+
+            <Divider />
+
+            <VStack align={{ base: "center", md: "start" }} spacing={2}>
+              <Text><b>Name:</b> Elmo Nickol Laplap</Text>
+              <Text><b>Age:</b> 29</Text>
+              <Text><b>Location:</b> Quezon, Bukidnon</Text>
+              <Text>
+                <b>Education:</b> Xavier University - Ateneo de Cagayan (BS Information Systems, 2019)
+              </Text>
+              <Text><b>Skills:</b> PHP, JavaScript, Python, Java</Text>
+              <Text>
+                <b>Goal:</b> Build innovative web apps with great UX
+              </Text>
+            </VStack>
+
+            {/* BUTTONS */}
+            <HStack pt={4} spacing={4}>
+              <Button
+                as="a"
+                href="/Resume.pdf"
+                download
+                colorScheme={colorMode === "light" ? "blue" : "teal"}
+                size="md"
+              >
+                Download Resume
+              </Button>
+
+              <BuyMeACoffeeButton />
+            </HStack>
+          </VStack>
         </Box>
       </Stack>
-      <Stacks />
-    </Box>
-  );
-};
 
-export default About;
+      {/* SKILLS SECTION */}
+      <Box mt={16}>
+        <Stacks />
+      </Box>
+    </Box>
+  )
+}
+
+export default About
