@@ -52,5 +52,19 @@
       "TailwindCSS",
       "Firebase"
     ]
+  },
+  {
+    "id": 5,
+    "title": "Betbuilder Checklist",
+    "description": "Bet Builder Checklist is a simple and efficient web application designed for bettors who want to organize, track, and manage their betting picks in one place.",
+    "github": "https://github.com/elmonickcool/betbuilder-checklist-app",
+    "live": "https://betbuilder-checklist-app.vercel.app/",
+    "img":"betbuilder.png",
+    "stack":[
+      "React",
+      "Node.js",
+      "Vite",
+      "Bootstrap"
+    ]
   }
 ]
