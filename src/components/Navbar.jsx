@@ -31,10 +31,8 @@ const Navbar = () => {
     <div className="mb-7">
       <nav className="flex items-center justify-between flex-wrap p-6 ">
         <div className="flex items-center flex-shrink-0 mr-6">
-          <Link as={NextLink} href="/" passHref={true} legacyBehavior={true}>
-            <a>
+          <Link as={NextLink} href="/" passHref={true} >
               <span className="font-semibold text-xl tracking-tight">Elmo Nickol</span>
-            </a>
           </Link>
         </div>
         <div className="block lg:hidden">
