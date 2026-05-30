@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { v4 as uuidv4 } from 'uuid';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCUcqxTcbOssPiKqg6Weg256KkUlT_0Vxg",
+    apiKey: "DerqONuhLq31kylx8cRF",
     authDomain: "my-contact-form-5be52.firebaseapp.com",
     projectId: "my-contact-form-5be52",
     storageBucket: "my-contact-form-5be52.appspot.com",
