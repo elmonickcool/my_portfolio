@@ -3,25 +3,10 @@ import Link from 'next/link';
 const NotFoundPage = () => {
   return (
     <>
-      <div>
-        <h1>404 - Page Not Found</h1>
-        <p>Sorry, there is nothing to see here</p>
-        <p>
-          Use the search box or the links below to explore our amazing
-          application
-        </p>
-        
-        <div>
-          <Link href='/'>
-            Homepage
-          </Link>
-          <Link href='/latest'>
-            Latest Products
-          </Link>
-          <Link href='/contact_list'>
-            Contact US
-          </Link>
-        </div>
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+        <p className="text-lg mb-8">Sorry, the page you are looking for does not exist.</p>
+        <Link href="/" className="text-blue-500 hover:underline">Go back to Home</Link>
       </div>
     </>
   );
