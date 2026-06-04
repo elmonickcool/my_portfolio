@@ -1,32 +1,27 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const { onDocumentCreated } = require("firebase-functions/v2/firestore");
+const { Resend } = require("resend");
 
-const {setGlobalOptions} = require("firebase-functions");
-const {onRequest} = require("firebase-functions/https");
-const logger = require("firebase-functions/logger");
+const resend = new Resend("re_KKGU6hji_9SDfS3FL1TwhoUhGoqfHjPS9");
 
-// For cost control, you can set the maximum number of containers that can be
-// running at the same time. This helps mitigate the impact of unexpected
-// traffic spikes by instead downgrading performance. This limit is a
-// per-function limit. You can override the limit for each function using the
-// `maxInstances` option in the function's options, e.g.
-// `onRequest({ maxInstances: 5 }, (req, res) => { ... })`.
-// NOTE: setGlobalOptions does not apply to functions using the v1 API. V1
-// functions should each use functions.runWith({ maxInstances: 10 }) instead.
-// In the v1 API, each function can only serve one request per container, so
-// this will be the maximum concurrent request count.
-setGlobalOptions({ maxInstances: 10 });
+exports.notifyNewContact = onDocumentCreated(
+  "contact/{docId}",
+  async (event) => {
+    const data = event.data.data();
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+    await resend.emails.send({
+      from: "noreply@yourdomain.com",
+      to: "elmonickol@gmail.com",
+      subject: "New Contact Form Submission",
+      html: `
+        <h2>New Contact Form Submission</h2>
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Contact Number:</strong> ${data.contactnum}</p>
+        <p><strong>Message:</strong></p>
+
+        <p>${data.message}</p>
+      `
+    });
+  }
+);

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { v4 as uuidv4 } from 'uuid';
+import emailjs from '@emailjs/browser';
 
 const firebaseConfig = {
     apiKey: "DerqONuhLq31kylx8cRF",
@@ -73,6 +74,12 @@ const Contact = () => {
         message,
         timestamp: serverTimestamp()
       });
+      await emailjs.send('service_0basdag', 'template_0e94ftm', {
+        name,
+        email,
+        contactnum,
+        message }, 'HaCznF6u_Ltn1pNIb');
+
 
       console.log("Document written with ID: ", docRef.id);
       setName('');
