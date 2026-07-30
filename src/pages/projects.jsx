@@ -35,9 +35,9 @@ const Project = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: projectShowcase.length > (slidesToShow || 1),
     speed: 500,
-    slidesToShow: slidesToShow || 1,
+    slidesToShow: Math.min(slidesToShow || 1, projectShowcase.length),
     slidesToScroll: 1,
     arrows: false,
   }
